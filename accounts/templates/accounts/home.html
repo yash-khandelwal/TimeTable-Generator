@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load staticfiles %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block title %}
+sign up
+{% endblock %}
+
+{% block body %}
+{% if user.is_authenticated %}
+  <div class="container"  style="background-color: #F2F3F4; border-radius: 5px; border-color: grey;"><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <font style="font-size: 25px; font-family: Helvetica;">Search Candidates :</font><hr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form action="{% url 'accounts:add_batch' %}" method = "GET">
+    <div class="container">
+      <div class="container row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="form-group"><label for="id_branch">Branch</label><select name="branch" class="form-control" id="branch">
+            <option value="">Select</option>
+            {{branches.count}}
+            {% for branch in branches %}
+            <option value="{{branch.branch_code}}">{{branch.branch_code}}</option>
+            {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group"><label for="id_sem">Sem</label><select name="sem" class="form-control" id="id_sem"">
+            <option value="">Select</option>
+            {% for i in '12345678'|make_list %}
+              <option value="{{forloop.counter}}">{{forloop.counter}}</option>
+            {% endfor %}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="id_course_schema">Course Schema</label>
+              <div class="form-group">
+                <input type="text" name="course_schema" maxlength="4" class="form-control" placeholder="Course Intro year" id="id_course_schema">
+              </div>
+          </div>
+
+          <div class="form-group">
+            <center>
+              <input type="submit" name='search' class="btn btn-primary " value=" Add ">
+            </center>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div><hr>
+    </div>
+  </form>
+
+  
+
+
+  {% endif %}
+
+{% endblock %}

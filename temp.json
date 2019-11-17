@@ -1,0 +1,78 @@
+[
+  {"model": "resource_data.course", "pk": "CSS-111", "fields": {"course_name":
+  "Computer Networks", "branch_code": "CSE", "sem": 1,
+   "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSS-112", "fields": {"course_name":
+  "Analysis & Design of Algorithms", "branch_code": "CSE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-113", "fields": {"course_name":
+  "Data Base Management Systems", "branch_code": "CSE", "sem": 1,
+   "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-114", "fields": {"course_name":
+  "Compiler Design", "branch_code": "CSE", "sem": 1,
+    "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-115", "fields": {"course_name":
+  "Communication Engineering", "branch_code": "CSE", "sem": 1,
+    "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSH-116", "fields": {"course_name":
+  "Open Elective-I", "branch_code": "CSE", "sem": 1,
+   "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-117", "fields": {"course_name":
+  "Computer Networks Lab", "branch_code": "CSE", "sem": 1,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-118", "fields": {"course_name":
+  "Data Base Management Systems Lab ", "branch_code": "CSE", "sem": 1,
+  "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-119", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 1,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSS-210", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-211", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-212", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-213", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-214", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-215", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-216", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-217", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-218", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "CSD-219", "fields": {"course_name":
+  "Compiler Design Lab ", "branch_code": "CSE", "sem": 3,
+   "credits": 2, "lecture": 0, "tutorial": 0, "practical": 3, "course_intro": 2014}}
+
+]

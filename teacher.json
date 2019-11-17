@@ -1,0 +1,49 @@
+[
+
+  {"model": "resource_data.teacher", "pk": "NM", "fields": {"first_name":
+     "NEHA", "last_name": "MAHAJAN", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "HM", "fields": {"first_name":
+     "Hem", "last_name": "Lata", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "SK", "fields": {"first_name":
+     "Satish", "last_name": "Kumar", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "RT", "fields": {"first_name":
+     "Richa", "last_name": "Thakur", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "SM", "fields": {"first_name":
+     "Sonali", "last_name": "Mahajan", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "GK", "fields": {"first_name":
+     "Gurpreet", "last_name": "Kaur", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "JK", "fields": {"first_name":
+     "Jasleen", "last_name": "Kaur", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "PS", "fields": {"first_name":
+     "Pranshu", "last_name": "Sharma", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "PG", "fields": {"first_name":
+     "Priyabrat", "last_name": "Garanayak", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "NK", "fields": {"first_name":
+     "Nitish", "last_name": "Katal", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "SG", "fields": {"first_name":
+     "Suveer", "last_name": "Guleria", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "AP", "fields": {"first_name":
+     "Akansha", "last_name": "Puri", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "HJ", "fields": {"first_name":
+     "Himani", "last_name": "Joshi", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "MS", "fields": {"first_name":
+     "Minakshi", "last_name": "Shastri", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "NS", "fields": {"first_name":
+     "Neha", "last_name": "Sharma", "department": "CSE"}}
+
+
+]

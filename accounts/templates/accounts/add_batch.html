@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load staticfiles %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block title %}
+sign up
+{% endblock %}
+
+{% block body %}
+{% if user.is_authenticated %}
+  <div class="container"  style="background-color: #F2F3F4; border-radius: 5px; border-color: grey;"><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <font style="font-size: 25px; font-family: Helvetica;">Add batch</font><hr>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <form action="{% url 'accounts:add_batch' %}" method = "POST">
+        {% csrf_token %}
+        {% for course in courses %}
+        <div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <select name="course_code{{forloop.counter}}" class="form-control" id="id_course_code{{forloop.counter}}">
+                <option value="{{course.course_code}}">{{course.course_name}}({{course.course_code}})</option>
+                {% for c in cc %}
+                <option value="{{c.course_code}}">{{c.course_name}}({{c.course_code}})</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <select name="teacher_code{{forloop.counter}}" class="form-control" id="id_teacher{{forloop.counter}}">
+                <option value="">Teacher</option>
+                {% for teacher in teachers %}
+                <option value="{{teacher.teacher_code}}">{{teacher.first_name}} {{teacher.last_name}}({{teacher.teacher_code}})</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="row">
+          <div class="form-group col-md-4">
+            <select name="room{{forloop.counter}}" class="form-control" id="id_room{{forloop.counter}}">
+              <option value="">Select</option>
+              {% for room in rooms %}
+              <option value="{{room}}">{{room}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <input type="number" name="no_class_week{{forloop.counter}}" class="form-control" placeholder="No of class week" title="" required="" id="id_no_class_week{{forloop.counter}}">
+          </div>
+          <div class="form-group col-md-4">
+            <input type="number" name="no_of_slots{{forloop.counter}}" class="form-control" placeholder="No of slots" title="" required="" id="id_no_of_slots{{forloop.counter}}">
+          </div>
+          </div>
+        </div><hr>
+        {% endfor %}
+         <input type="hidden" id="id_no_of_courses" name="no_of_courses" value="{{courses.count}}">
+         <input type="hidden" id="id_branch_sem" name="branch_sem" value="{{branch_sem}}">
+        <input type="submit" class="btn btn-primary" value="Sign Up">
+      </form>
+    </div>
+
+
+  {% endif %}
+
+{% endblock %}

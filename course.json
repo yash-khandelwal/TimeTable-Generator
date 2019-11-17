@@ -1,0 +1,315 @@
+[
+  {"model": "resource_data.course", "pk": "ECS-111", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECS-112", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECS-113", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-114", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-115", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECS-116", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-117", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-118", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECS-211", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-212", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-213", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-214", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-215", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-216", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-217", "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-218" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-219" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-310" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-311" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-313" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-314" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-315" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECO-316" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-317" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-318" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-319" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECH-411" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-412" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-413" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECE-414" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECE-415" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-416" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-417" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-418" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-419" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "ECD-410" , "fields": {"course_name":
+  "Information Security", "branch_code": "ECE", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1111" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1111" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1112" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1113" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1114" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1115" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1116" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1117" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1118" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1119" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 1,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1231" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1232" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1233" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1234" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1235" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1236" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1237" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1238" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1239" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 3,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1351" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1352" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+  {"model": "resource_data.course", "pk": "IT-1353" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1354" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1355" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1356" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1357" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1358" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1359" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 5,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1471" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1472" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1473" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1474" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1475" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1476" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1477" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1478" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}},
+
+
+  {"model": "resource_data.course", "pk": "IT-1479" , "fields": {"course_name":
+  "Information Security", "branch_code": "IT", "sem": 7,
+  "credits": 3, "lecture": 3, "tutorial": 1, "practical": 0, "course_intro": 2014}}
+
+]

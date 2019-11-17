@@ -1,0 +1,22 @@
+[
+  {"model": "resource_data.teacher", "pk": "VK", "fields": {"first_name":
+    "Vikram", "last_name": "Kumar", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "SSK", "fields": {"first_name":
+    "Subramanian", "last_name": "Selvakumar", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "RP", "fields": {"first_name":
+    "Roopali", "last_name": "Punj", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "RK", "fields": {"first_name":
+    "Ravneet", "last_name": "Kaur", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "SS", "fields": {"first_name":
+    "Sumit", "last_name": "Singh", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "VK", "fields": {"first_name":
+    "Vikram", "last_name": "Kumar", "department": "CSE"}},
+
+  {"model": "resource_data.teacher", "pk": "DT", "fields": {"first_name":
+    "Divyansh", "last_name": "Thakur", "department": "CSE"}}
+]

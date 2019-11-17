@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load staticfiles %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block title %}
+sign up
+{% endblock %}
+
+{% block body %}
+  <div class="register">
+    <div class="row">
+
+      <div class="col-md-3 register-left">
+        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+        <h3>Welcome</h3>
+        <p>You are 30 seconds away from from making timetable</p>
+        <input type="submit" href="http://iiitu.ac.in/" value="Login"/><br/>
+      </div>
+
+      <div class="col-md-9 register-right">
+        <div class="tab-content" id="myTabContent">
+          <div id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="register-heading">Sign up as a faculty</h3>
+            <form action="{% url 'accounts:signup' %}" method = "POST">
+              {% csrf_token %}
+              {% bootstrap_form_errors form %}
+              <div class="row register-form">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="first_name" maxlength="30" class="form-control" placeholder="First Name" id="id_first_name">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="last_name" maxlength="150" class="form-control" placeholder="Last Name" title="" id="id_last_name">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" maxlength="200" class="form-control" placeholder="Email" required="" id="id_email">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="phone_no" maxlength="13" class="form-control" placeholder="Phone No" required="" id="id_phone_no">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password1" class="form-control" placeholder="Password" required="" id="id_password1">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password2" class="form-control" placeholder="Password confirmation" required="" id="id_password2">
+                  </div>
+                  <input type="submit" class="btnRegister"  value="Register"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block custom_js %}
+  <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="{% static 'js/contactform.js' %}"></script>
+{% endblock %}

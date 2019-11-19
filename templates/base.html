@@ -2,9 +2,6 @@
 {% load staticfiles %}
 <html lang="en" dir="ltr">
   <head>
-    {% block extrascript %}
-
-    {% endblock %}
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/my.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
@@ -17,6 +14,12 @@
     <script src="{% static 'jquery/jquery-3.4.1.min.js' %}"></script>
     <script src="{% static 'ajax/popper.min.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+
+    {% block extrascript %}
+
+    {% endblock %}
+
     {% block extra_cdn %}
 
     {% endblock %}

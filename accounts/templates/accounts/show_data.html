@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load staticfiles %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block title %}
+sign up
+{% endblock %}
+
+{% block extrascript %}
+  <link rel="stylesheet" href="{% static 'css/table1.css' %}">
+  <link rel="stylesheet" href="{% static 'css/table2.css' %}">
+{% endblock %}
+
+{% block body %}
+
+  <div class="limiter">
+    <div class="container-table100">
+      <div class="wrap-table100">
+        <div class="table100">
+          <table>
+            <thead>
+              <tr class="table100-head">
+                <th class="column1">Date/Time</th>
+                <th class="column2">8:30 - 9:20</th>
+                <th class="column2">9:20 - 10:10</th>
+                <th class="column2">10:10 - 11:00</th>
+                <th class="column2">11:00 - 11:50</th>
+                <th class="column2">11:50 - 12:40</th>
+                <th class="column_break">Break</th>
+                <th class="column2">1:30 - 2:20</th>
+                <th class="column2">2:20 - 3:10</th>
+                <th class="column2">3:10 - 4:00</th>
+                <th class="column2">4:00 - 4:50</th>
+                <th class="column2">4:50 - 5:40</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td class="column1">Mon</td>
+                  <td class="column2">
+                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="0">CSD-314<br>IY</p></div>
+                  </td>
+                  <td class="column2">iPhone X 64Gb Grey</td>
+                  <td class="column2">$999.00</td>
+                  <td class="column2">1</td>
+                  <td class="column2">$999.00</td>
+                  <td class="column_break"></td>
+                  <td class="column2">
+                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="5">CSD-316<br>PP</p></div>
+                  </td>
+                  <td class="column2">iPhone X 64Gb Grey</td>
+                  <td class="column2">$999.00</td>
+                  <td class="column2">1</td>
+                  <td class="column2">$999.00</td>
+                </tr>
+                <tr>
+                  <td class="column1">Tue</td>
+                  <td class="column2">
+                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="10">CSD-315<br>TT</p></div>
+                  </td>
+                  <td class="column2">iPhone X 64Gb Grey</td>
+                  <td class="column2">$999.00</td>
+                  <td class="column2">1</td>
+                  <td class="column2">$999.00</td>
+                  <td class="column_break"></td>
+                  <td class="column2">
+                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="15">CSD-317<br>BB</p></div>
+                  </td>
+                  <td class="column2">iPhone X 64Gb Grey</td>
+                  <td class="column2">$999.00</td>
+                  <td class="column2">1</td>
+                  <td class="column2">$999.00</td>
+                </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    	var teachMap = {};
+    	var classMap = {};
+
+    	teachMap["IY"] = new Map();
+    	teachMap["PP"] = new Map();
+    	teachMap["TT"] = new Map();
+    	teachMap["BB"] = new Map();
+    	classMap["B5"] = new Map();
+    	classMap["Elec"] = new Map();
+    	classMap["Mng"] = new Map();
+    	teachMap["IY"][0] = 1;
+    	teachMap["IY"][1] = 1;
+    	function dragStart(event) {
+    	  event.dataTransfer.setData("Text", event.target.id);
+    	}
+
+    	function allowDrop(event) {
+    	  event.preventDefault();
+    	}
+
+    	function drop(event) {
+    	  event.preventDefault();
+    	  var data = event.dataTransfer.getData("Text");
+
+
+
+      var srcCourse = document.getElementById(data).textContent.slice(0, -2);
+      var srcTeach = document.getElementById(data).textContent.slice(-2);
+      var tarCourse = event.target.textContent.slice(0, -2);
+      var tarTeach = event.target.textContent.slice(-2);
+      var srcSlot = parseInt(document.getElementById(data).id);
+      var tarSlot = parseInt(event.target.id);
+      console.log(srcTeach, srcSlot);
+      if(teachMap[srcTeach][tarSlot] !== 1 && teachMap[tarTeach][srcSlot] !== 1){
+      	teachMap[srcTeach][srcSlot] = 0;
+      	teachMap[srcTeach][srcSlot+1] = 0;
+      	teachMap[srcTeach][tarSlot] = 1;
+      	teachMap[srcTeach][tarSlot+1] = 1;
+
+      	teachMap[tarTeach][tarSlot] = 0;
+      	teachMap[tarTeach][tarSlot+1] = 0;
+      	teachMap[tarTeach][srcSlot] = 1;
+      	teachMap[tarTeach][srcSlot+1] = 1;
+      	swapNodes(event.target, document.getElementById(data));
+      }
+      else
+      	alert("overlap");
+    }
+
+    function swapNodes(node1, node2) {
+    	var id = node1.id;
+    	node1.id = node2.id;
+    	node2.id = id;
+
+        node2_copy = node2.cloneNode(true);
+        node1.parentNode.insertBefore(node2_copy, node1);
+        node2.replaceWith(node1);
+    }
+  </script>
+
+{% endblock %}

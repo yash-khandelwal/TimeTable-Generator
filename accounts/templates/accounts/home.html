@@ -14,7 +14,7 @@ sign up
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <font style="font-size: 25px; font-family: Helvetica;">Search Candidates :</font><hr>
+          <font style="font-size: 25px; font-family: Helvetica;">ADD BATCH</font><hr>
         </div>
       </div>
     </div>
@@ -26,7 +26,6 @@ sign up
         <div class="col-md-4">
           <div class="form-group"><label for="id_branch">Branch</label><select name="branch" class="form-control" id="branch">
             <option value="">Select</option>
-            {{branches.count}}
             {% for branch in branches %}
             <option value="{{branch.branch_code}}">{{branch.branch_code}}</option>
             {% endfor %}
@@ -44,7 +43,12 @@ sign up
           <div class="form-group">
             <label for="id_course_schema">Course Schema</label>
               <div class="form-group">
-                <input type="text" name="course_schema" maxlength="4" class="form-control" placeholder="Course Intro year" id="id_course_schema">
+                <select name="course_schema" class="form-control" id="id_course_schema">
+                  <option value="">Course Intro year</option>
+                  {% for year in course_schema %}
+                  <option value="{{year}}">{{year}}</option>
+                  {% endfor %}
+                  </select>
               </div>
           </div>
 
@@ -59,7 +63,31 @@ sign up
     </div>
   </form>
 
-  
+  <div class="container">
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th style="text-align: center; vertical-align: middle;" scope="col">S.No.</th>
+          <th style="text-align: center; vertical-align: middle;" scope="col">Batch</th>
+          <th style="text-align: center; vertical-align: middle;" scope="col">Courses</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for batch_count in batch_counts %}
+        <tr>
+          <th style="text-align: center; vertical-align: middle;" scope="row">{{ forloop.counter }}</th>
+          <td style="text-align: center; vertical-align: middle;">{{batch_count.branch_sem}}</td>
+          <td style="text-align: center; vertical-align: middle;">{{batch_count.total}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+      <a href="{% url 'accounts:pass_value' %}" class="btn btn-primary">Pass Value</a>
+  </div>
+
 
 
   {% endif %}

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext, gettext_lazy as _
-from accounts.models import User, Batch
+from accounts.models import User, Batch, Result
 # Register your models here.
 class MyUserAdmin(UserAdmin):
     fieldsets = (
@@ -13,5 +13,12 @@ class MyUserAdmin(UserAdmin):
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
     )
 
+class BatchAdmin(admin.ModelAdmin):
+    list_display = ['branch_sem','course_code','teacher_code','room','no_class_week','no_of_slots']
+
+class ResultAdmin(admin.ModelAdmin):
+    list_display = ['cse3','cse5','ece3','ece5','it3','it5']
+
 admin.site.register(User, MyUserAdmin)
-admin.site.register(Batch)
+admin.site.register(Batch,BatchAdmin)
+admin.site.register(Result, ResultAdmin)

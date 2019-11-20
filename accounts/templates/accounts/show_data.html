@@ -3,6 +3,8 @@
 {% bootstrap_css %}
 {% load staticfiles %}
 {% bootstrap_javascript jquery='full' %}
+{% load mathfilters %}
+{% load account_extras %}
 
 {% block title %}
 sign up
@@ -11,6 +13,12 @@ sign up
 {% block extrascript %}
   <link rel="stylesheet" href="{% static 'css/table1.css' %}">
   <link rel="stylesheet" href="{% static 'css/table2.css' %}">
+  <style>
+    @font-face {
+  font-family: OpenSans-Regular;
+  src: url({% static 'fonts/OpenSans/OpenSans-Regular.ttf' %});
+  }
+  </style>
 {% endblock %}
 
 {% block body %}
@@ -28,7 +36,7 @@ sign up
                 <th class="column2">10:10 - 11:00</th>
                 <th class="column2">11:00 - 11:50</th>
                 <th class="column2">11:50 - 12:40</th>
-                <th class="column_break">Break</th>
+                <th class="column2">12:40 - 1:30</th>
                 <th class="column2">1:30 - 2:20</th>
                 <th class="column2">2:20 - 3:10</th>
                 <th class="column2">3:10 - 4:00</th>
@@ -37,43 +45,70 @@ sign up
               </tr>
             </thead>
             <tbody>
+                {% for day in days %}
                 <tr>
-                  <td class="column1">Mon</td>
+                  <td class="column1">{{day}}</td>
+                  {% with i=forloop.counter0|mul:"11"|add:"0"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
                   <td class="column2">
-                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="0">CSD-314<br>IY</p></div>
+                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="0"><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
                   </td>
-                  <td class="column2">iPhone X 64Gb Grey</td>
-                  <td class="column2">$999.00</td>
-                  <td class="column2">1</td>
-                  <td class="column2">$999.00</td>
-                  <td class="column_break"></td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"1"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"2"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"3"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"4"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"5"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"6"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
                   <td class="column2">
-                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="5">CSD-316<br>PP</p></div>
+                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="5">{{res.cse3}}<br>{{teacher.2}}<br></p></div>
                   </td>
-                  <td class="column2">iPhone X 64Gb Grey</td>
-                  <td class="column2">$999.00</td>
-                  <td class="column2">1</td>
-                  <td class="column2">$999.00</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"7"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"8"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"9"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
+                  {% with i=forloop.counter0|mul:"11"|add:"10"%}
+                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                  {% endwith %}
+                  {% endwith %}
                 </tr>
-                <tr>
-                  <td class="column1">Tue</td>
-                  <td class="column2">
-                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="10">CSD-315<br>TT</p></div>
-                  </td>
-                  <td class="column2">iPhone X 64Gb Grey</td>
-                  <td class="column2">$999.00</td>
-                  <td class="column2">1</td>
-                  <td class="column2">$999.00</td>
-                  <td class="column_break"></td>
-                  <td class="column2">
-                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="15">CSD-317<br>BB</p></div>
-                  </td>
-                  <td class="column2">iPhone X 64Gb Grey</td>
-                  <td class="column2">$999.00</td>
-                  <td class="column2">1</td>
-                  <td class="column2">$999.00</td>
-                </tr>
-
+                {% endfor %}
             </tbody>
           </table>
         </div>
@@ -91,6 +126,7 @@ sign up
     	teachMap["BB"] = new Map();
     	classMap["B5"] = new Map();
     	classMap["Elec"] = new Map();
+      var a = {{teachers}}
     	classMap["Mng"] = new Map();
     	teachMap["IY"][0] = 1;
     	teachMap["IY"][1] = 1;

@@ -14,7 +14,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
 from .tokens import account_activation_token
 from django.core.mail import EmailMessage
-from accounts.models import User,Batch, Result
+from accounts.models import User,Batch, Result, ResultTeacher
 from django.db.models import Count
 from django.urls import reverse_lazy
 from django.views import View
@@ -28,7 +28,7 @@ from braces import views
 from resource_data.models import Branch, Course, Teacher, Room
 from django.shortcuts import render_to_response
 import json
-UserModel = get_user_model()
+from django import template
 # Create your views here.
 
 
@@ -49,103 +49,264 @@ def fetch_data(request):
         print(size)
 
 
-        for i in range(size+5):
+        for i in range(size):
             if(i%5==0 and i%2!=0):
                 res = Result()
-            else:
-                cse1 = ''
-                if('CSE1' in keys):
-                    cse1 = json.loads(data_js['CSE1'])[i]
-                cse2 = ''
-                if('CSE2' in keys):
-                    cse2 = json.loads(data_js['CSE2'])[i]
-                cse3 = ''
-                if('CSE3' in keys):
-                    cse3 = json.loads(data_js['CSE3'])[i]
-                cse4 = ''
-                if('CSE4' in keys):
-                    cse4 = json.loads(data_js['CSE4'])[i]
-                cse5 = ''
-                if('CSE5' in keys):
-                    cse5 = json.loads(data_js['CSE5'])[i]
-                cse6 = ''
-                if('CSE6' in keys):
-                    cse6 = json.loads(data_js['CSE6'])[i]
-                cse7 = ''
-                if('CSE7' in keys):
-                    cse7 = json.loads(data_js['CSE7'])[i]
-                cse8 = ''
-                if('CSE8' in keys):
-                    cse8 = json.loads(data_js['CSE8'])[i]
+                res.save()
+            cse1 = '0'
+            if('CSE1' in keys):
+                cse1 = json.loads(data_js['CSE1'])[i]
+            cse2 = '0'
+            if('CSE2' in keys):
+                cse2 = json.loads(data_js['CSE2'])[i]
+            cse3 = '0'
+            if('CSE3' in keys):
+                cse3 = json.loads(data_js['CSE3'])[i]
+            cse4 = '0'
+            if('CSE4' in keys):
+                cse4 = json.loads(data_js['CSE4'])[i]
+            cse5 = '0'
+            if('CSE5' in keys):
+                cse5 = json.loads(data_js['CSE5'])[i]
+            cse6 = '0'
+            if('CSE6' in keys):
+                cse6 = json.loads(data_js['CSE6'])[i]
+            cse7 = '0'
+            if('CSE7' in keys):
+                cse7 = json.loads(data_js['CSE7'])[i]
+            cse8 = '0'
+            if('CSE8' in keys):
+                cse8 = json.loads(data_js['CSE8'])[i]
 
-                ece1 = ''
-                if('ECE1' in keys):
-                    ece1 = json.loads(data_js['ECE1'])[i]
-                ece2 = ''
-                if('ECE2' in keys):
-                    ece2 = json.loads(data_js['ECE2'])[i]
-                ece3 = ''
-                if('ECE3' in keys):
-                    ece3 = json.loads(data_js['ECE3'])[i]
-                ece4 = ''
-                if('ECE4' in keys):
-                    ece4 = json.loads(data_js['ECE4'])[i]
+            ece1 = '0'
+            if('ECE1' in keys):
+                ece1 = json.loads(data_js['ECE1'])[i]
+            ece2 = '0'
+            if('ECE2' in keys):
+                ece2 = json.loads(data_js['ECE2'])[i]
+            ece3 = '0'
+            if('ECE3' in keys):
+                ece3 = json.loads(data_js['ECE3'])[i]
+            ece4 = '0'
+            if('ECE4' in keys):
+                ece4 = json.loads(data_js['ECE4'])[i]
 
-                ece5 = ''
-                if('ECE5' in keys):
-                    ece5 = json.loads(data_js['ECE5'])[i]
-                ece6 = ''
-                if('ECE6' in keys):
-                    ece6 = json.loads(data_js['ECE6'])[i]
-                ece7 = ''
-                if('ECE7' in keys):
-                    ece7 = json.loads(data_js['ECE7'])[i]
-                ece8 = ''
-                if('ECE8' in keys):
-                    ece8 = json.loads(data_js['ECE8'])[i]
+            ece5 = '0'
+            if('ECE5' in keys):
+                ece5 = json.loads(data_js['ECE5'])[i]
+            ece6 = '0'
+            if('ECE6' in keys):
+                ece6 = json.loads(data_js['ECE6'])[i]
+            ece7 = '0'
+            if('ECE7' in keys):
+                ece7 = json.loads(data_js['ECE7'])[i]
+            ece8 = '0'
+            if('ECE8' in keys):
+                ece8 = json.loads(data_js['ECE8'])[i]
 
-                it1 = ''
-                if('IT1' in keys):
-                    it1 = json.loads(data_js['IT1'])[i]
-                it2 = ''
-                if('IT2' in keys):
-                    it2 = json.loads(data_js['IT2'])[i]
-                it3 = ''
-                if('IT3' in keys):
-                    it3 = json.loads(data_js['IT3'])[i]
-                it4 = ''
-                if('IT4' in keys):
-                    it4 = json.loads(data_js['IT4'])[i]
-                it5 = ''
-                if('IT5' in keys):
-                    it5 = json.loads(data_js['IT5'])[i]
-                it6 = ''
-                if('IT6' in keys):
-                    it6 = json.loads(data_js['IT6'])[i]
-                it7 = ''
-                if('IT7' in keys):
-                    it7 = json.loads(data_js['IT7'])[i]
-                it8 = ''
-                if('IT8' in keys):
-                    it8 = json.loads(data_js['IT8'])[i]
+            it1 = '0'
+            if('IT1' in keys):
+                it1 = json.loads(data_js['IT1'])[i]
+            it2 = '0'
+            if('IT2' in keys):
+                it2 = json.loads(data_js['IT2'])[i]
+            it3 = '0'
+            if('IT3' in keys):
+                it3 = json.loads(data_js['IT3'])[i]
+            it4 = '0'
+            if('IT4' in keys):
+                it4 = json.loads(data_js['IT4'])[i]
+            it5 = '0'
+            if('IT5' in keys):
+                it5 = json.loads(data_js['IT5'])[i]
+            it6 = '0'
+            if('IT6' in keys):
+                it6 = json.loads(data_js['IT6'])[i]
+            it7 = '0'
+            if('IT7' in keys):
+                it7 = json.loads(data_js['IT7'])[i]
+            it8 = '0'
+            if('IT8' in keys):
+                it8 = json.loads(data_js['IT8'])[i]
 
             res = Result(cse1=cse1, cse2=cse2, cse3=cse3, cse4=cse4, cse5=cse5, cse6=cse6, cse7=cse7, cse8=cse8, ece1=ece1, ece2=ece2, ece3=ece3, ece4=ece4, ece5=ece5, ece6=ece6, ece7=ece7, ece8=ece8, it1=it1, it2=it2, it3=it3, it4=it4, it5=it5, it6=it6, it7=it7, it8=it8)
-            res.save()
+
+            # res.save()
         return HttpResponse("Passed")
     return HttpResponseBadRequest()
 
 def show_data(request):
     results = list(Result.objects.all())
-    return render(request, 'accounts/show_data.html', {'results':results})
+    teachers = []
+    for i in range(len(results)):
+        temp = []
+        result = results[i]
 
+        cse1 = result.cse1
+        cse1_faculty = ''
+        if(cse1 != '0'):
+            cse1_faculty = Batch.objects.get(course_code=cse1).teacher_code.teacher_code
+        temp.append(cse1_faculty)
+
+        cse2 = result.cse2
+        cse2_faculty = ''
+        if(cse2 != '0'):
+            cse2_faculty = Batch.objects.get(course_code=cse2).teacher_code.teacher_code
+        temp.append(cse2_faculty)
+
+        cse3 = result.cse3
+        cse3_faculty = ''
+        if(cse3 != '0'):
+            cse3_faculty = Batch.objects.get(course_code=cse3).teacher_code.teacher_code
+        temp.append(cse3_faculty)
+
+        cse4 = result.cse4
+        cse4_faculty = ''
+        if(cse4 != '0'):
+            cse4_faculty = Batch.objects.get(course_code=cse4).teacher_code.teacher_code
+        temp.append(cse4_faculty)
+
+        cse5 = result.cse5
+        cse5_faculty = ''
+        if(cse5 != '0'):
+            cse5_faculty = Batch.objects.get(course_code=cse5).teacher_code.teacher_code
+        temp.append(cse5_faculty)
+
+        cse6 = result.cse6
+        cse6_faculty = ''
+        if(cse6 != '0'):
+            cse6_faculty = Batch.objects.get(course_code=cse6).teacher_code.teacher_code
+        temp.append(cse6_faculty)
+
+        cse7 = result.cse7
+        cse7_faculty = ''
+        if(cse7 != '0'):
+            cse7_faculty = Batch.objects.get(course_code=cse7).teacher_code.teacher_code
+        temp.append(cse7_faculty)
+
+        cse8 = result.cse8
+        cse8_faculty = ''
+        if(cse8 != '0'):
+            cse8_faculty = Batch.objects.get(course_code=cse8).teacher_code.teacher_code
+        temp.append(cse8_faculty)
+
+
+        ece1 = result.ece1
+        ece1_faculty = ''
+        if(ece1 != '0'):
+            ece1_faculty = Batch.objects.get(course_code=ece1).teacher_code.teacher_code
+        temp.append(ece1_faculty)
+
+        ece2 = result.ece2
+        ece2_faculty = ''
+        if(ece2 != '0'):
+            ece2_faculty = Batch.objects.get(course_code=ece2).teacher_code.teacher_code
+        temp.append(ece2_faculty)
+
+        ece3 = result.ece3
+        ece3_faculty = ''
+        if(ece3 != '0'):
+            ece3_faculty = Batch.objects.get(course_code=ece3).teacher_code.teacher_code
+        temp.append(ece3_faculty)
+
+        ece4 = result.ece4
+        ece4_faculty = ''
+        if(ece4 != '0'):
+            ece4_faculty = Batch.objects.get(course_code=ece4).teacher_code.teacher_code
+        temp.append(ece4_faculty)
+
+        ece5 = result.ece5
+        ece5_faculty = ''
+        if(ece5 != '0'):
+            ece5_faculty = Batch.objects.get(course_code=ece5).teacher_code.teacher_code
+        temp.append(ece5_faculty)
+
+        ece6 = result.ece6
+        ece6_faculty = ''
+        if(ece6 != '0'):
+            ece6_faculty = Batch.objects.get(course_code=ece6).teacher_code.teacher_code
+        temp.append(ece6_faculty)
+
+        ece7 = result.ece7
+        ece7_faculty = ''
+        if(ece7 != '0'):
+            ece7_faculty = Batch.objects.get(course_code=ece7).teacher_code.teacher_code
+        temp.append(ece7_faculty)
+
+        ece8 = result.ece8
+        ece8_faculty = ''
+        if(ece8 != '0'):
+            ece8_faculty = Batch.objects.get(course_code=ece8).teacher_code.teacher_code
+        temp.append(ece8_faculty)
+
+
+        it1 = result.it1
+        it1_faculty = ''
+        if(it1 != '0'):
+            it1_faculty = Batch.objects.get(course_code=it1).teacher_code.teacher_code
+        temp.append(it1_faculty)
+
+        it2 = result.it2
+        it2_faculty = ''
+        if(it2 != '0'):
+            it2_faculty = Batch.objects.get(course_code=it2).teacher_code.teacher_code
+        temp.append(it2_faculty)
+
+        it3 = result.it3
+        it3_faculty = ''
+        if(it3 != '0'):
+            it3_faculty = Batch.objects.get(course_code=it3).teacher_code.teacher_code
+        temp.append(it3_faculty)
+
+        it4 = result.it4
+        it4_faculty = ''
+        if(it4 != '0'):
+            it4_faculty = Batch.objects.get(course_code=it4).teacher_code.teacher_code
+        temp.append(it4_faculty)
+
+        it5 = result.it5
+        it5_faculty = ''
+        if(it5 != '0'):
+            it5_faculty = Batch.objects.get(course_code=it5).teacher_code.teacher_code
+        temp.append(it5_faculty)
+
+        it6 = result.it6
+        it6_faculty = ''
+        if(it6 != '0'):
+            it6_faculty = Batch.objects.get(course_code=it6).teacher_code.teacher_code
+        temp.append(it6_faculty)
+
+        it7 = result.it7
+        it7_faculty = ''
+        if(it7 != '0'):
+            it7_faculty = Batch.objects.get(course_code=it7).teacher_code.teacher_code
+        temp.append(it7_faculty)
+
+        it8 = result.it8
+        it8_faculty = ''
+        if(it8 != '0'):
+            it8_faculty = Batch.objects.get(course_code=it8).teacher_code.teacher_code
+        temp.append(it8_faculty)
+
+        # teacher = ResultTeacher(cse1_faculty=cse1_faculty, cse2_faculty=cse2_faculty,
+         # cse3_faculty=cse3_faculty, cse4_faculty=cse4_faculty, cse5_faculty=cse5_faculty,
+         #  cse6_faculty=cse6_faculty, cse7_faculty=cse7_faculty,cse8_faculty=cse8_faculty,
+         #  ece1_faculty=ece1_faculty, ece2_faculty=ece2_faculty,
+         #   ece3_faculty=ece3_faculty, ece4_faculty=ece4_faculty, ece5_faculty=ece5_faculty,
+         #    ece6_faculty=ece6_faculty, ece7_faculty=ece7_faculty,ece8_faculty=ece8_faculty,
+         #    it1_faculty=it1_faculty, it2_faculty=it2_faculty,
+         #     it3_faculty=it3_faculty, it4_faculty=it4_faculty, it5_faculty=it5_faculty,
+         #      it6_faculty=it6_faculty, it7_faculty=it7_faculty,it8_faculty=it8_faculty)
+
+        teachers.append(temp)
+
+    days = ['Mon', 'Tue', 'Wed', 'Thu', 'Sat']
+    return render(request, 'accounts/show_data.html', {'results':results,'days':days, 'teachers':teachers})
 
 def pass_value(request):
     batch = Batch.objects.filter(branch_sem__in=['CSE3','CSE5','ECE3','ECE5','IT3','IT5'])
     course=[]
     teacher = []
-    if(request.is_ajax()):
-        course = request.POST.get('courses',None)
-        print(course)
     for i in range(batch.count()):
         my_list = []
         temp = []
@@ -158,7 +319,6 @@ def pass_value(request):
         my_list.append(str(batch[i].no_class_week))
         my_list.append(str(batch[i].no_of_slots))
 
-        # my_list= [ , str(batch[i].course_code), str(batch[i].teacher_code), batch[i].room, str(batch[i].no_class_week), str(batch[i].no_of_slots ]
         course.append(my_list)
         teacher.append(temp)
 

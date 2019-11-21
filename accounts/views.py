@@ -30,23 +30,23 @@ from django.shortcuts import render_to_response
 import json
 from django import template
 # Create your views here.
-
+batches = []
 
 
 def fetch_data(request):
     if request.is_ajax():
         data = request.POST.get("param")
         print(data)
-        print(type(data))
+        # print(type(data))
         data_js = json.loads(data)
         keys = list(data_js.keys())
-        print(keys)
-        print('lalala')
+        # print(keys)
+        # print('lalala')
         x = json.loads(data_js["CSE3"])
-        print(x)
+        # print(x)
         # print(data_js['CSE3'][0])
         size = len(x)
-        print(size)
+        # print(size)
 
 
         for i in range(size):
@@ -288,23 +288,26 @@ def show_data(request):
             it8_faculty = Batch.objects.get(course_code=it8).teacher_code.teacher_code
         temp.append(it8_faculty)
 
-        # teacher = ResultTeacher(cse1_faculty=cse1_faculty, cse2_faculty=cse2_faculty,
-         # cse3_faculty=cse3_faculty, cse4_faculty=cse4_faculty, cse5_faculty=cse5_faculty,
-         #  cse6_faculty=cse6_faculty, cse7_faculty=cse7_faculty,cse8_faculty=cse8_faculty,
-         #  ece1_faculty=ece1_faculty, ece2_faculty=ece2_faculty,
-         #   ece3_faculty=ece3_faculty, ece4_faculty=ece4_faculty, ece5_faculty=ece5_faculty,
-         #    ece6_faculty=ece6_faculty, ece7_faculty=ece7_faculty,ece8_faculty=ece8_faculty,
-         #    it1_faculty=it1_faculty, it2_faculty=it2_faculty,
-         #     it3_faculty=it3_faculty, it4_faculty=it4_faculty, it5_faculty=it5_faculty,
-         #      it6_faculty=it6_faculty, it7_faculty=it7_faculty,it8_faculty=it8_faculty)
+        teacher = ResultTeacher(cse1_faculty=cse1_faculty, cse2_faculty=cse2_faculty,
+         cse3_faculty=cse3_faculty, cse4_faculty=cse4_faculty, cse5_faculty=cse5_faculty,
+          cse6_faculty=cse6_faculty, cse7_faculty=cse7_faculty,cse8_faculty=cse8_faculty,
+          ece1_faculty=ece1_faculty, ece2_faculty=ece2_faculty,
+           ece3_faculty=ece3_faculty, ece4_faculty=ece4_faculty, ece5_faculty=ece5_faculty,
+            ece6_faculty=ece6_faculty, ece7_faculty=ece7_faculty,ece8_faculty=ece8_faculty,
+            it1_faculty=it1_faculty, it2_faculty=it2_faculty,
+             it3_faculty=it3_faculty, it4_faculty=it4_faculty, it5_faculty=it5_faculty,
+              it6_faculty=it6_faculty, it7_faculty=it7_faculty,it8_faculty=it8_faculty)
 
         teachers.append(temp)
 
+    print(batches)    
     days = ['Mon', 'Tue', 'Wed', 'Thu', 'Sat']
-    return render(request, 'accounts/show_data.html', {'results':results,'days':days, 'teachers':teachers})
+    return render(request, 'accounts/show_data.html', {'results':results,'days':days, 'teachers':teachers, 'batches':batches})
 
 def pass_value(request):
-    batch = Batch.objects.filter(branch_sem__in=['CSE3','CSE5','ECE3','ECE5','IT3','IT5'])
+    global batches
+    batches = request.GET.getlist('batches')
+    batch = Batch.objects.filter(branch_sem__in=batches)
     course=[]
     teacher = []
     for i in range(batch.count()):
@@ -322,7 +325,7 @@ def pass_value(request):
         course.append(my_list)
         teacher.append(temp)
 
-    return render(request, 'accounts/new.html', {'course': course, 'teacher':teacher})
+    return render(request, 'accounts/new.html', {'course': course, 'teacher':teacher, 'batches':batches})
 
 class Homepage(ListView):
     model = Batch

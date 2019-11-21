@@ -84,10 +84,28 @@ sign up
     </table>
   </div>
 
-  <div class="container">
-      <a href="{% url 'accounts:pass_value' %}" class="btn btn-primary">Pass Value</a>
-  </div>
-
+  <form action="{% url 'accounts:pass_value' %}" method = "GET">
+    <div class="container">
+      <div class="container row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <select multiple name="batches" class="form-control" id="id_batches">
+              <option value="">Select Batches</option>
+              {% for batch_count in batch_counts %}
+              <option value="{{batch_count.branch_sem}}">{{batch_count.branch_sem}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+              <input type="submit" name='search' class="btn btn-primary " value="Pass Value">
+          </div>
+        </div>
+      </div><hr>
+    </div>
+  </form>
 
 
   {% endif %}

@@ -23,98 +23,100 @@ sign up
 
 {% block body %}
 
-  <div class="limiter">
-    <div class="container-table100">
-      <div class="wrap-table100">
-        <div class="table100">
-          <table>
-            <thead>
-              <tr class="table100-head">
-                <th class="column1">Date/Time</th>
-                <th class="column2">8:30 - 9:20</th>
-                <th class="column2">9:20 - 10:10</th>
-                <th class="column2">10:10 - 11:00</th>
-                <th class="column2">11:00 - 11:50</th>
-                <th class="column2">11:50 - 12:40</th>
-                <th class="column2">12:40 - 1:30</th>
-                <th class="column2">1:30 - 2:20</th>
-                <th class="column2">2:20 - 3:10</th>
-                <th class="column2">3:10 - 4:00</th>
-                <th class="column2">4:00 - 4:50</th>
-                <th class="column2">4:50 - 5:40</th>
-              </tr>
-            </thead>
-            <tbody>
-                {% for day in days %}
-                <tr>
-                  <td class="column1">{{day}}</td>
-                  {% with i=forloop.counter0|mul:"11"|add:"0"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">
-                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="0"><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
-                  </td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"1"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"2"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"3"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"4"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"5"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"6"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">
-                    <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="5">{{res.cse3}}<br>{{teacher.2}}<br></p></div>
-                  </td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"7"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"8"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"9"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
-                  {% with i=forloop.counter0|mul:"11"|add:"10"%}
-                  {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
-                  <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
-                  {% endwith %}
-                  {% endwith %}
+  <!-- {% if "CSE3" in batches %} -->
+    <div class="limiter">
+      <div class="container-table100">
+        <div class="wrap-table100">
+          <div class="table100">
+            <table>
+              <thead>
+                <tr class="table100-head">
+                  <th class="column1">Date/Time</th>
+                  <th class="column2">8:30 - 9:20</th>
+                  <th class="column2">9:20 - 10:10</th>
+                  <th class="column2">10:10 - 11:00</th>
+                  <th class="column2">11:00 - 11:50</th>
+                  <th class="column2">11:50 - 12:40</th>
+                  <th class="column2">12:40 - 1:30</th>
+                  <th class="column2">1:30 - 2:20</th>
+                  <th class="column2">2:20 - 3:10</th>
+                  <th class="column2">3:10 - 4:00</th>
+                  <th class="column2">4:00 - 4:50</th>
+                  <th class="column2">4:50 - 5:40</th>
                 </tr>
-                {% endfor %}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                  {% for day in days %}
+                  <tr>
+                    <td class="column1">{{day}}</td>
+                    {% with i=forloop.counter0|mul:"11"|add:"0"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="0"><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                    </td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"1"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"2"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"3"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"4"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"5"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"6"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" draggable="true" id="5">{{res.cse3}}<br>{{teacher.2}}<br></p></div>
+                    </td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"7"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"8"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"9"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                    {% with i=forloop.counter0|mul:"11"|add:"10"%}
+                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    <td class="column2">{{res.cse3}}<br>{{teacher.2}}</td>
+                    {% endwith %}
+                    {% endwith %}
+                  </tr>
+                  {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  <!-- {% endif %} -->
 
   <script>
     	var teachMap = {};
@@ -126,7 +128,7 @@ sign up
     	teachMap["BB"] = new Map();
     	classMap["B5"] = new Map();
     	classMap["Elec"] = new Map();
-      var a = {{teachers}}
+      var a = {{teachers|safe}}
     	classMap["Mng"] = new Map();
     	teachMap["IY"][0] = 1;
     	teachMap["IY"][1] = 1;

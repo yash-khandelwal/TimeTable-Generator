@@ -300,9 +300,164 @@ def show_data(request):
 
         teachers.append(temp)
 
-    print(batches)    
+    rooms = []
+    for i in range(len(results)):
+        temp = []
+        result = results[i]
+
+        cse1 = result.cse1
+        cse1_room = ''
+        if(cse1 != '0'):
+            cse1_room = Batch.objects.get(course_code=cse1).room
+        temp.append(cse1_room)
+
+        cse2 = result.cse2
+        cse2_room = ''
+        if(cse2 != '0'):
+            cse2_room = Batch.objects.get(course_code=cse2).room
+        temp.append(cse2_room)
+
+        cse3 = result.cse3
+        cse3_room = ''
+        if(cse3 != '0'):
+            cse3_room = Batch.objects.get(course_code=cse3).room
+        temp.append(cse3_room)
+
+        cse4 = result.cse4
+        cse4_room = ''
+        if(cse4 != '0'):
+            cse4_room = Batch.objects.get(course_code=cse4).room
+        temp.append(cse4_room)
+
+        cse5 = result.cse5
+        cse5_room = ''
+        if(cse5 != '0'):
+            cse5_room = Batch.objects.get(course_code=cse5).room
+        temp.append(cse5_room)
+
+        cse6 = result.cse6
+        cse6_room = ''
+        if(cse6 != '0'):
+            cse6_room = Batch.objects.get(course_code=cse6).room
+        temp.append(cse6_room)
+
+        cse7 = result.cse7
+        cse7_room = ''
+        if(cse7 != '0'):
+            cse7_room = Batch.objects.get(course_code=cse7).room
+        temp.append(cse7_room)
+
+        cse8 = result.cse8
+        cse8_room = ''
+        if(cse8 != '0'):
+            cse8_room = Batch.objects.get(course_code=cse8).room
+        temp.append(cse8_room)
+
+
+        ece1 = result.ece1
+        ece1_room = ''
+        if(ece1 != '0'):
+            ece1_room = Batch.objects.get(course_code=ece1).room
+        temp.append(ece1_room)
+
+        ece2 = result.ece2
+        ece2_room = ''
+        if(ece2 != '0'):
+            ece2_room = Batch.objects.get(course_code=ece2).room
+        temp.append(ece2_room)
+
+        ece3 = result.ece3
+        ece3_room = ''
+        if(ece3 != '0'):
+            ece3_room = Batch.objects.get(course_code=ece3).room
+        temp.append(ece3_room)
+
+        ece4 = result.ece4
+        ece4_room = ''
+        if(ece4 != '0'):
+            ece4_room = Batch.objects.get(course_code=ece4).room
+        temp.append(ece4_room)
+
+        ece5 = result.ece5
+        ece5_room = ''
+        if(ece5 != '0'):
+            ece5_room = Batch.objects.get(course_code=ece5).room
+        temp.append(ece5_room)
+
+        ece6 = result.ece6
+        ece6_room = ''
+        if(ece6 != '0'):
+            ece6_room = Batch.objects.get(course_code=ece6).room
+        temp.append(ece6_room)
+
+        ece7 = result.ece7
+        ece7_room = ''
+        if(ece7 != '0'):
+            ece7_room = Batch.objects.get(course_code=ece7).room
+        temp.append(ece7_room)
+
+        ece8 = result.ece8
+        ece8_room = ''
+        if(ece8 != '0'):
+            ece8_room = Batch.objects.get(course_code=ece8).room
+        temp.append(ece8_room)
+
+
+        it1 = result.it1
+        it1_room = ''
+        if(it1 != '0'):
+            it1_room = Batch.objects.get(course_code=it1).room
+        temp.append(it1_room)
+
+        it2 = result.it2
+        it2_room = ''
+        if(it2 != '0'):
+            it2_room = Batch.objects.get(course_code=it2).room
+        temp.append(it2_room)
+
+        it3 = result.it3
+        it3_room = ''
+        if(it3 != '0'):
+            it3_room = Batch.objects.get(course_code=it3).room
+        temp.append(it3_room)
+
+        it4 = result.it4
+        it4_room = ''
+        if(it4 != '0'):
+            it4_room = Batch.objects.get(course_code=it4).room
+        temp.append(it4_room)
+
+        it5 = result.it5
+        it5_room = ''
+        if(it5 != '0'):
+            it5_room = Batch.objects.get(course_code=it5).room
+        temp.append(it5_room)
+
+        it6 = result.it6
+        it6_room = ''
+        if(it6 != '0'):
+            it6_room = Batch.objects.get(course_code=it6).room
+        temp.append(it6_room)
+
+        it7 = result.it7
+        it7_room = ''
+        if(it7 != '0'):
+            it7_room = Batch.objects.get(course_code=it7).room
+        temp.append(it7_room)
+
+        it8 = result.it8
+        it8_room = ''
+        if(it8 != '0'):
+            it8_room = Batch.objects.get(course_code=it8).room
+        temp.append(it8_room)
+
+        rooms.append(temp)
+    print(rooms)
+    print(len(rooms))
+    print(len(teachers))
+    print(batches)
     days = ['Mon', 'Tue', 'Wed', 'Thu', 'Sat']
-    return render(request, 'accounts/show_data.html', {'results':results,'days':days, 'teachers':teachers, 'batches':batches})
+    return render(request, 'accounts/show_data.html', {'results':results,'days':days, 'teachers':teachers, 'batches':batches, 'rooms':rooms})
 
 def pass_value(request):
     global batches
@@ -349,7 +504,7 @@ class AddBatch(CreateView):
     template_name = 'accounts/add_batch.html'
     fields = ('course_code','teacher_code','room','no_class_week','no_of_slots')
     no_of_courses=0
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('accounts:home')
     branch_sem = ''
 
     def get_context_data(self, **kwargs):
@@ -399,7 +554,7 @@ class AddBatch(CreateView):
                             no_of_slots=no_of_slots)
             print(batch)
             batch.save()
-        return redirect('index')
+        return redirect('accounts:home')
 
 
 
@@ -415,7 +570,7 @@ class CustomLoginView(LoginView,RedirectView):
         """
         It redirects to respective homepage of user
         """
-        return reverse('index')
+        return reverse('accounts:home')
 
 def signup(request):
 

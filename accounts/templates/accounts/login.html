@@ -16,14 +16,14 @@ sign up
         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
         <h3>Welcome</h3>
         <p>You are 30 seconds away from from making timetable</p>
-        <input type="submit" href="{% url 'accounts:login' %}" value="Sign up"/><br/>
+        <input type="submit" href="{% url 'index' %}" value="Sign up"/><br/>
       </div>
 
       <div class="col-md-9 register-right">
         <div class="tab-content" id="myTabContent">
           <div id="home" role="tabpanel" aria-labelledby="home-tab">
             <h3 class="register-heading">Login as a faculty</h3>
-            <form action="{% url 'accounts:login' %}" method = "POST">
+            <form action="{% url 'index' %}" method = "POST">
               {% csrf_token %}
               {% bootstrap_form_errors form %}
               <div class="row register-form">

@@ -23,7 +23,6 @@ sign up
 
 {% block body %}
 
-  <!-- {% if "CSE3" in batches %} -->
     <div class="limiter">
       <div class="container-table100">
         <div class="wrap-table100">
@@ -50,79 +49,79 @@ sign up
                   <tr>
                     <td class="column1">{{day}}</td>
                     {% with i=forloop.counter0|mul:"11"|add:"0"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"1"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"2"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"3"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"4"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"5"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"6"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"7"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"8"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"9"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
                     {% with i=forloop.counter0|mul:"11"|add:"10"%}
-                    {% with res=results|get_at_index:i teacher=teachers|get_at_index:i %}
+                    {% with course=courses|get_at_index:i teacher=teachers|get_at_index:i %}
                     <td class="column2">
-                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{res.cse3}}<br>{{teacher.2}}</p></div>
+                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}</p></div>
                     </td>
                     {% endwith %}
                     {% endwith %}
@@ -134,13 +133,12 @@ sign up
         </div>
       </div>
     </div>
-  <!-- {% endif %} -->
 
   <script>
       var teachers = {{teachers|safe}}
       var rooms = {{rooms|safe}}
        // Pradeep
-      var batch_id = 2;
+      var batch_id = {{batch_code}};
 
 
     	function dragStart(event) {
@@ -287,7 +285,6 @@ sign up
                    success: function (response) {
                            if (response.success) {
                              console.log('Successful');
-                             window.location.href = response.url;
                            }
                            else {
                              console.log('Unsuccesful');
@@ -298,5 +295,18 @@ sign up
 
 
   </script>
+  <div class="container">
+    <form action="{% url 'accounts:show_data' %}" method = "GET">
+      <div class="row register-form">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <input type="hidden" id="id_batch" name="batch" value="{{batch}}">
+          <input onclick="get_updated_course_code(teachers,batch_id)" type="submit" name='search' class="btnRegister" value="Save Changes">
+        </div>
+        <br><br>
+        <div class="col-md-3"></div>
+      </div>
+    </form>
+  </div>
 
 {% endblock %}

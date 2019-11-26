@@ -4,29 +4,29 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-get_batch_code	/home/sirkp/time_table/accounts/views.py	/^def get_batch_code(s):$/;"	function	line:33
-fetch_data	/home/sirkp/time_table/accounts/views.py	/^def fetch_data(request):$/;"	function	line:49
-show_data	/home/sirkp/time_table/accounts/views.py	/^def show_data(request):$/;"	function	line:149
-pass_value	/home/sirkp/time_table/accounts/views.py	/^def pass_value(request):$/;"	function	line:538
-Homepage	/home/sirkp/time_table/accounts/views.py	/^class Homepage(LoginRequiredMixin,ListView):$/;"	class	line:561
-login_url	/home/sirkp/time_table/accounts/views.py	/^    login_url = 'index'$/;"	variable	line:562	class:Homepage
-model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:563	class:Homepage
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/home.html'$/;"	variable	line:564	class:Homepage
-context_object_name	/home/sirkp/time_table/accounts/views.py	/^    context_object_name = 'batch_counts'$/;"	variable	line:565	class:Homepage
-get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:567	class:Homepage
-get_queryset	/home/sirkp/time_table/accounts/views.py	/^    def get_queryset(self):$/;"	member	line:576	class:Homepage
-AddBatch	/home/sirkp/time_table/accounts/views.py	/^class AddBatch(CreateView):$/;"	class	line:580
-model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:581	class:AddBatch
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/add_batch.html'$/;"	variable	line:582	class:AddBatch
-fields	/home/sirkp/time_table/accounts/views.py	/^    fields = ('course_code','teacher_code','room','no_class_week','no_of_slots')$/;"	variable	line:583	class:AddBatch
-no_of_courses	/home/sirkp/time_table/accounts/views.py	/^    no_of_courses=0$/;"	variable	line:584	class:AddBatch
-success_url	/home/sirkp/time_table/accounts/views.py	/^    success_url = reverse_lazy('accounts:home')$/;"	variable	line:585	class:AddBatch
-branch_sem	/home/sirkp/time_table/accounts/views.py	/^    branch_sem = ''$/;"	variable	line:586	class:AddBatch
-get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:588	class:AddBatch
-post	/home/sirkp/time_table/accounts/views.py	/^    def post(self, request, *args, **kwargs):$/;"	member	line:608	class:AddBatch
-CustomLoginView	/home/sirkp/time_table/accounts/views.py	/^class CustomLoginView(LoginView,RedirectView):$/;"	class	line:647
-form_class	/home/sirkp/time_table/accounts/views.py	/^    form_class = LoginForm$/;"	variable	line:652	class:CustomLoginView
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/login.html'$/;"	variable	line:653	class:CustomLoginView
-get_redirect_url	/home/sirkp/time_table/accounts/views.py	/^    def get_redirect_url(self):$/;"	member	line:655	class:CustomLoginView
-signup	/home/sirkp/time_table/accounts/views.py	/^def signup(request):$/;"	function	line:661
-activate	/home/sirkp/time_table/accounts/views.py	/^def activate(request, uidb64, token):$/;"	function	line:687
+get_batch_code	/home/sirkp/time_table/accounts/views.py	/^def get_batch_code(s):$/;"	function	line:34
+fetch_data	/home/sirkp/time_table/accounts/views.py	/^def fetch_data(request):$/;"	function	line:50
+show_data	/home/sirkp/time_table/accounts/views.py	/^def show_data(request):$/;"	function	line:150
+pass_value	/home/sirkp/time_table/accounts/views.py	/^def pass_value(request):$/;"	function	line:539
+Homepage	/home/sirkp/time_table/accounts/views.py	/^class Homepage(LoginRequiredMixin,ListView):$/;"	class	line:562
+login_url	/home/sirkp/time_table/accounts/views.py	/^    login_url = 'index'$/;"	variable	line:563	class:Homepage
+model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:564	class:Homepage
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/home.html'$/;"	variable	line:565	class:Homepage
+context_object_name	/home/sirkp/time_table/accounts/views.py	/^    context_object_name = 'batch_counts'$/;"	variable	line:566	class:Homepage
+get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:568	class:Homepage
+get_queryset	/home/sirkp/time_table/accounts/views.py	/^    def get_queryset(self):$/;"	member	line:577	class:Homepage
+AddBatch	/home/sirkp/time_table/accounts/views.py	/^class AddBatch(CreateView):$/;"	class	line:581
+model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:582	class:AddBatch
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/add_batch.html'$/;"	variable	line:583	class:AddBatch
+fields	/home/sirkp/time_table/accounts/views.py	/^    fields = ('course_code','teacher_code','room','no_class_week','no_of_slots')$/;"	variable	line:584	class:AddBatch
+no_of_courses	/home/sirkp/time_table/accounts/views.py	/^    no_of_courses=0$/;"	variable	line:585	class:AddBatch
+success_url	/home/sirkp/time_table/accounts/views.py	/^    success_url = reverse_lazy('accounts:home')$/;"	variable	line:586	class:AddBatch
+branch_sem	/home/sirkp/time_table/accounts/views.py	/^    branch_sem = ''$/;"	variable	line:587	class:AddBatch
+get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:589	class:AddBatch
+post	/home/sirkp/time_table/accounts/views.py	/^    def post(self, request, *args, **kwargs):$/;"	member	line:609	class:AddBatch
+CustomLoginView	/home/sirkp/time_table/accounts/views.py	/^class CustomLoginView(LoginView,RedirectView):$/;"	class	line:648
+form_class	/home/sirkp/time_table/accounts/views.py	/^    form_class = LoginForm$/;"	variable	line:653	class:CustomLoginView
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/login.html'$/;"	variable	line:654	class:CustomLoginView
+get_redirect_url	/home/sirkp/time_table/accounts/views.py	/^    def get_redirect_url(self):$/;"	member	line:656	class:CustomLoginView
+signup	/home/sirkp/time_table/accounts/views.py	/^def signup(request):$/;"	function	line:662
+activate	/home/sirkp/time_table/accounts/views.py	/^def activate(request, uidb64, token):$/;"	function	line:688

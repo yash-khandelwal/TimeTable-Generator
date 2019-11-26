@@ -28,6 +28,7 @@ from resource_data.models import Branch, Course, Teacher, Room
 from django.shortcuts import render_to_response
 import json
 from django import template
+from time import sleep
 # Create your views here.
 
 def get_batch_code(s):
@@ -151,8 +152,11 @@ def show_data(request):
     if request.is_ajax():#get data after swapping
         updated_courses = request.POST.get("updated_courses")
         batch_id = request.POST.get("batch_id")
+        print(batch_id)
         updated_courses = json.loads(updated_courses)
         for i in range(55):
+            if(updated_courses[i]==''):
+                updated_courses[i]='0'
             res = results[i]
             if(batch_id=='0'):
                 res.cse1=updated_courses[i]
@@ -207,12 +211,23 @@ def show_data(request):
 
         return JsonResponse({ 'success': True,'url': reverse_lazy('accounts:show_data') })
 
+    sleep(1)
     print('after    update')
     batch = request.GET.get('batch')
     batch_code = get_batch_code(batch)
     print(batch_code)
-    return HttpResponse('Jai Hind')
-    print(results[0].cse3)
+    print(batch)
+
+    res_batch = Result.objects.values(batch.lower())
+    courses = []
+    for i in range(res_batch.count()):
+        course = [v for k,v in res_batch[i].items()][0]
+        if(course=='0'):
+            course = ''
+        courses.append(course)
+
+    print(courses)
+    results = list(Result.objects.all())
     teachers = []
     for i in range(len(results)):
         temp = []
@@ -363,16 +378,6 @@ def show_data(request):
         if(it8 != '0'):
             it8_faculty = Batch.objects.get(course_code=it8).teacher_code.teacher_code
         temp.append(it8_faculty)
-
-        teacher = ResultTeacher(cse1_faculty=cse1_faculty, cse2_faculty=cse2_faculty,
-         cse3_faculty=cse3_faculty, cse4_faculty=cse4_faculty, cse5_faculty=cse5_faculty,
-          cse6_faculty=cse6_faculty, cse7_faculty=cse7_faculty,cse8_faculty=cse8_faculty,
-          ece1_faculty=ece1_faculty, ece2_faculty=ece2_faculty,
-           ece3_faculty=ece3_faculty, ece4_faculty=ece4_faculty, ece5_faculty=ece5_faculty,
-            ece6_faculty=ece6_faculty, ece7_faculty=ece7_faculty,ece8_faculty=ece8_faculty,
-            it1_faculty=it1_faculty, it2_faculty=it2_faculty,
-             it3_faculty=it3_faculty, it4_faculty=it4_faculty, it5_faculty=it5_faculty,
-              it6_faculty=it6_faculty, it7_faculty=it7_faculty,it8_faculty=it8_faculty)
 
         teachers.append(temp)
 
@@ -528,12 +533,8 @@ def show_data(request):
         temp.append(it8_room)
 
         rooms.append(temp)
-    # print(rooms)
-    # print(len(rooms))
-    # print(len(teachers))
-    # print(batches)
     days = ['Mon', 'Tue', 'Wed', 'Thu', 'Sat']
-    return render(request, 'accounts/show_data.html', {'results':results,'days':days, 'teachers':teachers, 'batches':batches, 'rooms':rooms})
+    return render(request, 'accounts/show_data.html', {'courses':courses,'days':days, 'teachers':teachers,'batch_code':batch_code ,'rooms':rooms,'batch':batch})
 
 def pass_value(request):
     batches = request.GET.getlist('batches')

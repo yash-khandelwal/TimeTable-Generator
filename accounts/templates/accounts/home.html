@@ -3,85 +3,95 @@
 {% bootstrap_css %}
 {% load staticfiles %}
 {% bootstrap_javascript jquery='full' %}
+{% block extrascript %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/util.css' %}">
+{% endblock %}
 
 {% block title %}
-sign up
+Home
 {% endblock %}
 
 {% block body %}
-{% if user.is_authenticated %}
-  <div class="container"  style="background-color: #F2F3F4; border-radius: 5px; border-color: grey;"><br>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <font style="font-size: 25px; font-family: Helvetica;">ADD BATCH</font><hr>
+  <div class="row">
+    <div class="col-md-6 limiter">
+      <div class="container-table100">
+        <div class="wrap-table100">
+          <div class="table100 ver1 m-b-110">
+            <div class="table100-head">
+              <table>
+                <thead>
+                  <tr class="row100 head">
+                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">S.No</th>
+                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">Batch</th>
+                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">Courses</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+
+            <div class="table100-body">
+              <table>
+                <tbody>
+                  {% for batch_count in batch_counts %}
+                  <tr class="row100 body">
+                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{ forloop.counter }}</td>
+                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{batch_count.branch_sem}}</td>
+                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{batch_count.total}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <form action="{% url 'accounts:add_batch' %}" method = "GET">
-    <div class="container">
-      <div class="container row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-          <div class="form-group"><label for="id_branch">Branch</label><select name="branch" class="form-control" id="branch">
-            <option value="">Select</option>
-            {% for branch in branches %}
-            <option value="{{branch.branch_code}}">{{branch.branch_code}}</option>
-            {% endfor %}
-            </select>
-          </div>
-
-          <div class="form-group"><label for="id_sem">Sem</label><select name="sem" class="form-control" id="id_sem"">
-            <option value="">Select</option>
-            {% for i in '12345678'|make_list %}
-              <option value="{{forloop.counter}}">{{forloop.counter}}</option>
-            {% endfor %}
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="id_course_schema">Course Schema</label>
-              <div class="form-group">
-                <select name="course_schema" class="form-control" id="id_course_schema">
-                  <option value="">Course Intro year</option>
-                  {% for year in course_schema %}
-                  <option value="{{year}}">{{year}}</option>
-                  {% endfor %}
-                  </select>
+    <div class="col-md-4 container">
+      <br>
+      <br>
+      <center><h1>ADD BATCH</h1></center>
+      <form action="{% url 'accounts:add_batch' %}" method = "GET">
+        <div class="">
+              <div class="form-group"><label for="id_branch">Branch</label><select name="branch" class="form-control" id="branch">
+                <option value="">Select</option>
+                {% for branch in branches %}
+                <option value="{{branch.branch_code}}">{{branch.branch_code}}</option>
+                {% endfor %}
+                </select>
               </div>
-          </div>
 
-          <div class="form-group">
-            <center>
-              <input type="submit" name='search' class="btn btn-primary " value=" Add ">
-            </center>
-          </div>
+              <div class="form-group"><label for="id_sem">Sem</label><select name="sem" class="form-control" id="id_sem"">
+                <option value="">Select</option>
+                {% for i in '12345678'|make_list %}
+                  <option value="{{forloop.counter}}">{{forloop.counter}}</option>
+                {% endfor %}
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="id_course_schema">Course Schema</label>
+                  <div class="form-group">
+                    <select name="course_schema" class="form-control" id="id_course_schema">
+                      <option value="">Course Intro year</option>
+                      {% for year in course_schema %}
+                      <option value="{{year}}">{{year}}</option>
+                      {% endfor %}
+                      </select>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <center>
+                  <input type="submit" name='search' class="btn btn-primary " value=" Add ">
+                </center>
+              </div>
         </div>
-        <div class="col-md-4"></div>
-      </div><hr>
+      </form>
     </div>
-  </form>
-
-  <div class="container">
-    <table class="table table-bordered">
-      <thead class="thead-light">
-        <tr>
-          <th style="text-align: center; vertical-align: middle;" scope="col">S.No.</th>
-          <th style="text-align: center; vertical-align: middle;" scope="col">Batch</th>
-          <th style="text-align: center; vertical-align: middle;" scope="col">Courses</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for batch_count in batch_counts %}
-        <tr>
-          <th style="text-align: center; vertical-align: middle;" scope="row">{{ forloop.counter }}</th>
-          <td style="text-align: center; vertical-align: middle;">{{batch_count.branch_sem}}</td>
-          <td style="text-align: center; vertical-align: middle;">{{batch_count.total}}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <div class="col-md-1"></div>
+    <!-- <div class="col-md-3">
+    </div> -->
   </div>
 
   <form action="{% url 'accounts:pass_value' %}" method = "GET">
@@ -89,7 +99,7 @@ sign up
       <div class="container row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-          <div class="form-group">
+          <div class="form-group ">
             <select multiple name="batches" class="form-control" id="id_batches">
               <option value="">Select Batches</option>
               {% for batch_count in batch_counts %}
@@ -100,7 +110,7 @@ sign up
         </div>
         <div class="col-md-4">
           <div class="form-group">
-              <input type="submit" name='search' class="btn btn-primary " value="Pass Value">
+              <input type="submit" name='search' class="btn btn-primary " value="Generate Table">
           </div>
         </div>
       </div><hr>
@@ -108,6 +118,6 @@ sign up
   </form>
 
 
-  {% endif %}
+
 
 {% endblock %}

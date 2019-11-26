@@ -1,6 +1,7 @@
 from django.db import models
 from resource_data.models import Course, Teacher
 from django.contrib.auth.models import AbstractUser
+from django.core import validators
 # Create your models here.
 class User(AbstractUser):
     """
@@ -83,6 +84,7 @@ class Batch(models.Model):
     room = models.CharField(max_length=10)
     no_class_week = models.IntegerField()
     no_of_slots = models.IntegerField()
+    course_schema = models.IntegerField(validators=[validators.MinValueValidator(2010), validators.MaxValueValidator(9999)])
 
 
     def __str__(self):

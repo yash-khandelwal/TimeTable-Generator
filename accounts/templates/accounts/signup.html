@@ -4,6 +4,14 @@
 {% load staticfiles %}
 {% bootstrap_javascript jquery='full' %}
 
+{% block extrascript %}
+  <script>
+    function redirect(){
+      window.location.href = '{% url 'index' %}'
+    };
+  </script>
+{% endblock %}
+
 {% block title %}
 sign up
 {% endblock %}
@@ -16,7 +24,7 @@ sign up
         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
         <h3>Welcome</h3>
         <p>You are 30 seconds away from from making timetable</p>
-        <input type="submit" href="http://iiitu.ac.in/" value="Login"/><br/>
+        <input type="submit" onclick="redirect()" href="" value="Login"/><br/>
       </div>
 
       <div class="col-md-9 register-right">

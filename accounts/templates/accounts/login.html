@@ -4,8 +4,16 @@
 {% load staticfiles %}
 {% bootstrap_javascript jquery='full' %}
 
+{% block extrascript %}
+  <script>
+    function redirect(){
+      window.location.href = '{% url 'accounts:signup' %}'
+    };
+  </script>
+{% endblock %}
+
 {% block title %}
-sign up
+login
 {% endblock %}
 
 {% block body %}
@@ -14,9 +22,9 @@ sign up
 
       <div class="col-md-3 register-left">
         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-        <h3>Welcome</h3>
+        <h3><font color="white">Welcome</font></h3>
         <p>You are 30 seconds away from from making timetable</p>
-        <input type="submit" href="{% url 'index' %}" value="Sign up"/><br/>
+        <input type="submit" onclick="redirect()" href="" value="Register"/>
       </div>
 
       <div class="col-md-9 register-right">
@@ -36,6 +44,7 @@ sign up
                     <input type="password" name="password" class="form-control" placeholder="Password" title="" required="" id="id_password">
                   </div>
                   <input type="submit" class="btnRegister"  value="Login"/>
+                  <a href="{% url 'accounts:password_reset' %}"><font color="blue">Forgot Password?</font></a>
                 </div>
                 <div class="col-md-3"></div>
               </div>

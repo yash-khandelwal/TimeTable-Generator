@@ -62,7 +62,8 @@ sign up
         {% endfor %}
          <input type="hidden" id="id_no_of_courses" name="no_of_courses" value="{{courses.count}}">
          <input type="hidden" id="id_branch_sem" name="branch_sem" value="{{branch_sem}}">
-        <input type="submit" class="btn btn-primary" value="Sign Up">
+         <input type="hidden" id="id_course_schema" name="course_schema" value="{{course_schema}}">
+        <input type="submit" class="btn btn-primary" value="Add">
       </form>
     </div>
 

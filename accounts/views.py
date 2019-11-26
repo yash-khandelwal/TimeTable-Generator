@@ -1,11 +1,10 @@
 from django.shortcuts import render,redirect,reverse
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 from dateutil.relativedelta import *
 from datetime import *
 from django.utils.timezone import make_aware
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.mixins import (LoginRequiredMixin,
-                                        PermissionRequiredMixin)
+from django.contrib.auth.mixins import LoginRequiredMixin
 from accounts.forms import SignupForm, LoginForm
 from accounts import forms
 from django.contrib.sites.shortcuts import get_current_site
@@ -30,113 +29,190 @@ from django.shortcuts import render_to_response
 import json
 from django import template
 # Create your views here.
-batches = []
 
+def get_batch_code(s):
+    s_1 = s[:len(s)-1]
+    s_2 = s[len(s)-1]
+    batch_code = 0
+    if(s_1=="CSE"):
+        batch_code = 0
+    elif(s_1=="ECE"):
+        batch_code = 8
+    elif(s_1=="IT"):
+        batch_code = 16
+    else:
+        print("Error\nBatches not listed")
+        return
+    s_2 = int(s_2,10)-1
+    return batch_code+s_2
 
 def fetch_data(request):
     if request.is_ajax():
         data = request.POST.get("param")
-        print(data)
-        # print(type(data))
-        data_js = json.loads(data)
-        keys = list(data_js.keys())
-        # print(keys)
-        # print('lalala')
-        x = json.loads(data_js["CSE3"])
-        # print(x)
-        # print(data_js['CSE3'][0])
-        size = len(x)
-        # print(size)
+        if(data=='{}' ):
+            return JsonResponse({ 'success': False })
+        else:
+            data_js = json.loads(data)
+            keys = list(data_js.keys())
+            x = json.loads(data_js["CSE3"])
+            size = len(json.loads(data_js[keys[0]]))
+            if(Result.objects.all().count()):
+                old_result = Result.objects.all()
+                old_result.delete()
 
+            for i in range(size):
+                if(i%5==0 and i%2!=0):
+                    res = Result()
+                    res.save()
+                cse1 = '0'
+                if('CSE1' in keys):
+                    cse1 = json.loads(data_js['CSE1'])[i]
+                cse2 = '0'
+                if('CSE2' in keys):
+                    cse2 = json.loads(data_js['CSE2'])[i]
+                cse3 = '0'
+                if('CSE3' in keys):
+                    cse3 = json.loads(data_js['CSE3'])[i]
+                cse4 = '0'
+                if('CSE4' in keys):
+                    cse4 = json.loads(data_js['CSE4'])[i]
+                cse5 = '0'
+                if('CSE5' in keys):
+                    cse5 = json.loads(data_js['CSE5'])[i]
+                cse6 = '0'
+                if('CSE6' in keys):
+                    cse6 = json.loads(data_js['CSE6'])[i]
+                cse7 = '0'
+                if('CSE7' in keys):
+                    cse7 = json.loads(data_js['CSE7'])[i]
+                cse8 = '0'
+                if('CSE8' in keys):
+                    cse8 = json.loads(data_js['CSE8'])[i]
 
-        for i in range(size):
-            if(i%5==0 and i%2!=0):
-                res = Result()
+                ece1 = '0'
+                if('ECE1' in keys):
+                    ece1 = json.loads(data_js['ECE1'])[i]
+                ece2 = '0'
+                if('ECE2' in keys):
+                    ece2 = json.loads(data_js['ECE2'])[i]
+                ece3 = '0'
+                if('ECE3' in keys):
+                    ece3 = json.loads(data_js['ECE3'])[i]
+                ece4 = '0'
+                if('ECE4' in keys):
+                    ece4 = json.loads(data_js['ECE4'])[i]
+
+                ece5 = '0'
+                if('ECE5' in keys):
+                    ece5 = json.loads(data_js['ECE5'])[i]
+                ece6 = '0'
+                if('ECE6' in keys):
+                    ece6 = json.loads(data_js['ECE6'])[i]
+                ece7 = '0'
+                if('ECE7' in keys):
+                    ece7 = json.loads(data_js['ECE7'])[i]
+                ece8 = '0'
+                if('ECE8' in keys):
+                    ece8 = json.loads(data_js['ECE8'])[i]
+
+                it1 = '0'
+                if('IT1' in keys):
+                    it1 = json.loads(data_js['IT1'])[i]
+                it2 = '0'
+                if('IT2' in keys):
+                    it2 = json.loads(data_js['IT2'])[i]
+                it3 = '0'
+                if('IT3' in keys):
+                    it3 = json.loads(data_js['IT3'])[i]
+                it4 = '0'
+                if('IT4' in keys):
+                    it4 = json.loads(data_js['IT4'])[i]
+                it5 = '0'
+                if('IT5' in keys):
+                    it5 = json.loads(data_js['IT5'])[i]
+                it6 = '0'
+                if('IT6' in keys):
+                    it6 = json.loads(data_js['IT6'])[i]
+                it7 = '0'
+                if('IT7' in keys):
+                    it7 = json.loads(data_js['IT7'])[i]
+                it8 = '0'
+                if('IT8' in keys):
+                    it8 = json.loads(data_js['IT8'])[i]
+
+                res = Result(cse1=cse1, cse2=cse2, cse3=cse3, cse4=cse4, cse5=cse5, cse6=cse6, cse7=cse7, cse8=cse8, ece1=ece1, ece2=ece2, ece3=ece3, ece4=ece4, ece5=ece5, ece6=ece6, ece7=ece7, ece8=ece8, it1=it1, it2=it2, it3=it3, it4=it4, it5=it5, it6=it6, it7=it7, it8=it8)
+
                 res.save()
-            cse1 = '0'
-            if('CSE1' in keys):
-                cse1 = json.loads(data_js['CSE1'])[i]
-            cse2 = '0'
-            if('CSE2' in keys):
-                cse2 = json.loads(data_js['CSE2'])[i]
-            cse3 = '0'
-            if('CSE3' in keys):
-                cse3 = json.loads(data_js['CSE3'])[i]
-            cse4 = '0'
-            if('CSE4' in keys):
-                cse4 = json.loads(data_js['CSE4'])[i]
-            cse5 = '0'
-            if('CSE5' in keys):
-                cse5 = json.loads(data_js['CSE5'])[i]
-            cse6 = '0'
-            if('CSE6' in keys):
-                cse6 = json.loads(data_js['CSE6'])[i]
-            cse7 = '0'
-            if('CSE7' in keys):
-                cse7 = json.loads(data_js['CSE7'])[i]
-            cse8 = '0'
-            if('CSE8' in keys):
-                cse8 = json.loads(data_js['CSE8'])[i]
-
-            ece1 = '0'
-            if('ECE1' in keys):
-                ece1 = json.loads(data_js['ECE1'])[i]
-            ece2 = '0'
-            if('ECE2' in keys):
-                ece2 = json.loads(data_js['ECE2'])[i]
-            ece3 = '0'
-            if('ECE3' in keys):
-                ece3 = json.loads(data_js['ECE3'])[i]
-            ece4 = '0'
-            if('ECE4' in keys):
-                ece4 = json.loads(data_js['ECE4'])[i]
-
-            ece5 = '0'
-            if('ECE5' in keys):
-                ece5 = json.loads(data_js['ECE5'])[i]
-            ece6 = '0'
-            if('ECE6' in keys):
-                ece6 = json.loads(data_js['ECE6'])[i]
-            ece7 = '0'
-            if('ECE7' in keys):
-                ece7 = json.loads(data_js['ECE7'])[i]
-            ece8 = '0'
-            if('ECE8' in keys):
-                ece8 = json.loads(data_js['ECE8'])[i]
-
-            it1 = '0'
-            if('IT1' in keys):
-                it1 = json.loads(data_js['IT1'])[i]
-            it2 = '0'
-            if('IT2' in keys):
-                it2 = json.loads(data_js['IT2'])[i]
-            it3 = '0'
-            if('IT3' in keys):
-                it3 = json.loads(data_js['IT3'])[i]
-            it4 = '0'
-            if('IT4' in keys):
-                it4 = json.loads(data_js['IT4'])[i]
-            it5 = '0'
-            if('IT5' in keys):
-                it5 = json.loads(data_js['IT5'])[i]
-            it6 = '0'
-            if('IT6' in keys):
-                it6 = json.loads(data_js['IT6'])[i]
-            it7 = '0'
-            if('IT7' in keys):
-                it7 = json.loads(data_js['IT7'])[i]
-            it8 = '0'
-            if('IT8' in keys):
-                it8 = json.loads(data_js['IT8'])[i]
-
-            res = Result(cse1=cse1, cse2=cse2, cse3=cse3, cse4=cse4, cse5=cse5, cse6=cse6, cse7=cse7, cse8=cse8, ece1=ece1, ece2=ece2, ece3=ece3, ece4=ece4, ece5=ece5, ece6=ece6, ece7=ece7, ece8=ece8, it1=it1, it2=it2, it3=it3, it4=it4, it5=it5, it6=it6, it7=it7, it8=it8)
-
-            # res.save()
-        return HttpResponse("Passed")
+            return JsonResponse({ 'success': True })
     return HttpResponseBadRequest()
 
 def show_data(request):
     results = list(Result.objects.all())
+    if request.is_ajax():#get data after swapping
+        updated_courses = request.POST.get("updated_courses")
+        batch_id = request.POST.get("batch_id")
+        updated_courses = json.loads(updated_courses)
+        for i in range(55):
+            res = results[i]
+            if(batch_id=='0'):
+                res.cse1=updated_courses[i]
+            elif(batch_id=='1'):
+                res.cse2=updated_courses[i]
+            elif(batch_id=='2'):
+                res.cse3=updated_courses[i]
+            elif(batch_id=='3'):
+                res.cse4=updated_courses[i]
+            elif(batch_id=='4'):
+                res.cse5=updated_courses[i]
+            elif(batch_id=='5'):
+                res.cse6=updated_courses[i]
+            elif(batch_id=='6'):
+                res.cse7=updated_courses[i]
+            elif(batch_id=='7'):
+                res.cse8=updated_courses[i]
+            elif(batch_id=='8'):
+                res.ece1=updated_courses[i]
+            elif(batch_id=='9'):
+                res.ece2=updated_courses[i]
+            elif(batch_id=='10'):
+                res.ece3=updated_courses[i]
+            elif(batch_id=='11'):
+                res.ece4=updated_courses[i]
+            elif(batch_id=='12'):
+                res.ece5=updated_courses[i]
+            elif(batch_id=='13'):
+                res.ece6=updated_courses[i]
+            elif(batch_id=='14'):
+                res.ece7=updated_courses[i]
+            elif(batch_id=='15'):
+                res.ece8=updated_courses[i]
+            elif(batch_id=='16'):
+                res.it1=updated_courses[i]
+            elif(batch_id=='17'):
+                res.it2=updated_courses[i]
+            elif(batch_id=='18'):
+                res.it3=updated_courses[i]
+            elif(batch_id=='19'):
+                res.it4=updated_courses[i]
+            elif(batch_id=='20'):
+                res.it5=updated_courses[i]
+            elif(batch_id=='21'):
+                res.it6=updated_courses[i]
+            elif(batch_id=='22'):
+                res.it7=updated_courses[i]
+            elif(batch_id=='23'):
+                res.it8=updated_courses[i]
+
+            res.save()
+
+        return JsonResponse({ 'success': True,'url': reverse_lazy('accounts:show_data') })
+
+    print('after    update')
+    batch = request.GET.get('batch')
+    batch_code = get_batch_code(batch)
+    print(batch_code)
+    return HttpResponse('Jai Hind')
+    print(results[0].cse3)
     teachers = []
     for i in range(len(results)):
         temp = []
@@ -452,17 +528,17 @@ def show_data(request):
         temp.append(it8_room)
 
         rooms.append(temp)
-    print(rooms)
-    print(len(rooms))
-    print(len(teachers))
-    print(batches)
+    # print(rooms)
+    # print(len(rooms))
+    # print(len(teachers))
+    # print(batches)
     days = ['Mon', 'Tue', 'Wed', 'Thu', 'Sat']
     return render(request, 'accounts/show_data.html', {'results':results,'days':days, 'teachers':teachers, 'batches':batches, 'rooms':rooms})
 
 def pass_value(request):
-    global batches
     batches = request.GET.getlist('batches')
     batch = Batch.objects.filter(branch_sem__in=batches)
+    all_batches = Batch.objects.values('branch_sem').distinct()
     course=[]
     teacher = []
     for i in range(batch.count()):
@@ -480,9 +556,10 @@ def pass_value(request):
         course.append(my_list)
         teacher.append(temp)
 
-    return render(request, 'accounts/new.html', {'course': course, 'teacher':teacher, 'batches':batches})
+    return render(request, 'accounts/new.html', {'course':course, 'teacher':teacher, 'batches':batches, 'all_batches':all_batches})
 
-class Homepage(ListView):
+class Homepage(LoginRequiredMixin,ListView):
+    login_url = 'index'
     model = Batch
     template_name = 'accounts/home.html'
     context_object_name = 'batch_counts'
@@ -497,8 +574,9 @@ class Homepage(ListView):
         return context
 
     def get_queryset(self):
-        batch_count = Batch.objects.all().values('branch_sem').annotate(total=Count('branch_sem'))
+        batch_count = Batch.objects.all().values('branch_sem','course_schema').annotate(total=Count('branch_sem'))
         return batch_count
+
 class AddBatch(CreateView):
     model = Batch
     template_name = 'accounts/add_batch.html'
@@ -521,6 +599,7 @@ class AddBatch(CreateView):
         context['cc'] = cc
         context['branch_sem'] = branch+sem
         context['teachers'] = teachers
+        context['course_schema'] = course_schema
         context['courses'] = courses
         self.no_of_courses = courses.count()
         print(self.no_of_courses)
@@ -530,8 +609,10 @@ class AddBatch(CreateView):
         branch_sem = self.request.POST['branch_sem']
         print(branch_sem)
         no_of_course = self.request.POST['no_of_courses']
+        course_schema = self.request.POST['course_schema']
         no_of_course = int(no_of_course,10)
         print(no_of_course)
+        print(course_schema)
 
         for i in range(no_of_course):
             print(branch_sem)
@@ -549,11 +630,16 @@ class AddBatch(CreateView):
             print(no_class_week)
             no_of_slots = self.request.POST['no_of_slots'+str(i+1)]
             print(no_of_slots)
-            batch = Batch(branch_sem=branch_sem, course_code=course_code,
-                            teacher_code=teacher_code, room=room, no_class_week=no_class_week,
-                            no_of_slots=no_of_slots)
+            if(Batch.objects.filter(branch_sem=branch_sem).count()):
+                batch = Batch.objects.filter(branch_sem=branch_sem)
+                batch.delete()
+
+            new_batch = Batch(branch_sem=branch_sem, course_code=course_code,
+            teacher_code=teacher_code, room=room, no_class_week=no_class_week,
+            no_of_slots=no_of_slots, course_schema=course_schema)
+            new_batch.save()
+
             print(batch)
-            batch.save()
         return redirect('accounts:home')
 
 

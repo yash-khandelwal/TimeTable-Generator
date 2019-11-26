@@ -6,112 +6,153 @@
 
 {% block extrascript %}
   <script src="{% static 'js/function.js' %}"></script>
-  <script type="text/javascript">
-  course = {{ course|safe }};
-  teacher = {{ teacher|safe }};
-
-</script>
-
 {% endblock %}
 {% block title %}
 sign up
 {% endblock %}
 
 {% block body %}
-{% if user.is_authenticated %}
-  <div class="container"  style="background-color: #F2F3F4; border-radius: 5px; border-color: grey;"><br>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <font style="font-size: 25px; font-family: Helvetica;">Search Candidates :</font><hr>
+
+<script type="text/javascript">
+  var course = {{ course|safe }};
+  var teacher = {{ teacher|safe }};
+  function timeTable()
+  {
+    var v1 = Module['vec']();
+
+    var v2 = Module['vec']();
+
+    var v3 = Module['vec']();
+
+    var v4 = Module['vec']();
+    var v6 = Module['vec']();
+
+    var v4 = Module['vec_int']();
+
+    var v5 = Module['vec_int']();
+
+
+    for(var i=0; i < course.length; i++ ){
+        v1.push_back(course[i][0]);
+        v2.push_back(course[i][1]);
+        v6.push_back(course[i][2]);
+        v3.push_back(course[i][3]);
+        v4.push_back(parseInt(course[i][4]));
+        v5.push_back(parseInt(course[i][5]));}
+
+    var getCourse = Module['getCourse'](v1, v2, v3, v4, v5);
+    var getTeacher = Module['getTeacher'](v2, v6);
+
+    var ttbl = Module['returnMapData'](getCourse, getTeacher);
+
+
+      var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+
+      // Stores unique branch codes
+      var uniqueBranch = new Set();
+      for(var i=0; i < course.length; i++)
+        uniqueBranch.add(course[i][0]);
+
+      var itr = uniqueBranch.entries();
+      var result = {}
+      for(var i=0; i<uniqueBranch.size; i++)
+      {
+        var branch = itr.next().value[0];
+        var temp = [];
+
+        var res_temp = ttbl.get(branch);
+        var len = res_temp.size();
+        for(var j=0; j < len; j++)
+          temp[j] = res_temp.get(j);
+
+        result[branch] = JSON.stringify(temp);
+      }
+      result = JSON.stringify(result);
+      console.log(result);
+
+      // var sr = [];
+      // for(var i=0; i<)
+      // console.log(course);
+      // data['key1'] = JSON.stringify(data['key1'])
+      // data['key2'] = JSON.stringify(data['key2'])
+      obj = JSON.stringify(obj);
+      console.log(obj);
+      $.ajax({type: 'POST',
+                   url: '{% url 'accounts:fetch_data' %}',                            // some data url
+                   data: {param: result,csrfmiddlewaretoken: '{{ csrf_token }}'},       // some params
+                   success: function (response) {
+                           if (response.success) {
+                             console.log('Successful');
+                             // window.location.href = response.url;
+                           }
+                           else {
+                             console.log('Unsuccesful');
+                           }
+                   }
+                  });
+                }
+</script>
+
+<div class="register">
+  <div class="row">
+
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+      <h3><font color="white">Welcome</font></h3>
+      <p>You are 30 seconds away from from making timetable</p>
+      <input type="submit" onclick="redirect()" href="" value="Register"/>
+    </div>
+
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h3 class="register-heading">Select a Batch</h3>
+          <form action="{% url 'accounts:show_data' %}" method = "GET">
+            <div class="row register-form">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <select name="batch" class="form-control" id="id_batch">
+                    <option value="">Select Batch</option>
+                    {% for batch in all_batches %}
+                    <option value="{{batch.branch_sem}}">{{batch.branch_sem}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <input onclick="timeTable()" type="submit" name='search' class="btnRegister" value="Show Table">
+              </div>
+              <div class="col-md-3"></div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-
-
-  <script type="text/javascript">
-function timeTable()
-{
-  var v1 = Module['vec']();
-
-  var v2 = Module['vec']();
-
-  var v3 = Module['vec']();
-
-  var v4 = Module['vec']();
-  var v6 = Module['vec']();
-
-  var v4 = Module['vec_int']();
-
-  var v5 = Module['vec_int']();
-
-
-  for(var i=0; i < course.length; i++ ){
-      v1.push_back(course[i][0]);
-      v2.push_back(course[i][1]);
-      v6.push_back(course[i][2]);
-      v3.push_back(course[i][3]);
-      v4.push_back(parseInt(course[i][4]));
-      v5.push_back(parseInt(course[i][5]));}
-
-  var getCourse = Module['getCourse'](v1, v2, v3, v4, v5);
-  var getTeacher = Module['getTeacher'](v2, v6);
-
-  var ttbl = Module['returnMapData'](getCourse, getTeacher);
-
-
-    var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
-
-    // Stores unique branch codes
-    var uniqueBranch = new Set();
-    for(var i=0; i < course.length; i++)
-      uniqueBranch.add(course[i][0]);
-
-    var itr = uniqueBranch.entries();
-    var result = {}
-    for(var i=0; i<uniqueBranch.size; i++)
-    {
-      var branch = itr.next().value[0];
-      var temp = [];
-
-      var res_temp = ttbl.get(branch);
-      var len = res_temp.size();
-      for(var j=0; j < len; j++)
-        temp[j] = res_temp.get(j);
-
-      result[branch] = JSON.stringify(temp);
-    }
-    result = JSON.stringify(result);
-    console.log(result);
-
-    // var sr = [];
-    // for(var i=0; i<)
-    // console.log(course);
-    // data['key1'] = JSON.stringify(data['key1'])
-    // data['key2'] = JSON.stringify(data['key2'])
-    obj = JSON.stringify(obj);
-    console.log(obj);
-    $.ajax({type: 'POST',
-                 url: '{% url 'accounts:fetch_data' %}',                            // some data url
-                 data: {param: result,csrfmiddlewaretoken: '{{ csrf_token }}'},       // some params
-                 success: function (response) {
-                     if (response.result === 'OK') {
-                         if (response.data && typeof(response.data) === 'object') {
-                           console.log('Successful');
-                         }
-                     } else {
-                         console.log('Unsuccesful');
-                     }
-                 }
-                });
-              }
-  </script>
+<!-- <form action="{% url 'accounts:show_data' %}" method = "GET">
   <div class="container">
-      <a onclick="timeTable()" href="{% url 'accounts:show_data' %}" class="btn btn-primary">Generate Table</a>
+    <div class="container row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="form-group ">
+          <select name="batch" class="form-control" id="id_batch">
+            <option value="">Select Batch</option>
+            {% for batch_count in batch_counts %}
+            <option value="{{ forloop.counter0 }}">{{batch_count.branch_sem}}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+            <input onclick="timeTable()" type="submit" name='search' class="btn btn-primary " value="Show Table">
+        </div>
+      </div>
+    </div>
   </div>
+</form> -->
 
-  {% endif %}
+
 
 {% endblock %}

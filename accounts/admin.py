@@ -14,7 +14,7 @@ class MyUserAdmin(UserAdmin):
     )
 
 class BatchAdmin(admin.ModelAdmin):
-    list_display = ['branch_sem','course_code','teacher_code','room','no_class_week','no_of_slots']
+    list_display = ['branch_sem','course_code','teacher_code','room','no_class_week','no_of_slots','course_schema']
 
 class ResultAdmin(admin.ModelAdmin):
     list_display = ['cse3','cse5','ece3','ece5','it3','it5']

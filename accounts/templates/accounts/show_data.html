@@ -139,7 +139,7 @@ sign up
   <script>
       var teachers = {{teachers|safe}}
       var rooms = {{rooms|safe}}
-       // Chutiya Pradeep
+       // Pradeep
       var batch_id = 2;
 
 
@@ -270,6 +270,33 @@ sign up
         node1.parentNode.insertBefore(node2_copy, node1);
         node2.replaceWith(node1);
     }
+    function get_updated_course_code(teachers, batch_id){
+      var updated_courses = []
+      for(var i=0;i<55;i++){
+        var course = document.getElementById(i).textContent
+        var teacher_len = teachers[0][batch_id].length
+        if(course != '0')
+        course = course.slice(0,course.length-teacher_len)
+        console.log(course)
+        updated_courses.push(course)
+      }
+      updated_courses = JSON.stringify(updated_courses)
+      $.ajax({type: 'POST',
+                   url: '{% url 'accounts:show_data' %}',                            // some data url
+                   data: {updated_courses: updated_courses, batch_id: batch_id, csrfmiddlewaretoken: '{{ csrf_token }}'},       // some params
+                   success: function (response) {
+                           if (response.success) {
+                             console.log('Successful');
+                             window.location.href = response.url;
+                           }
+                           else {
+                             console.log('Unsuccesful');
+                           }
+                   }
+                  });
+    }
+
+
   </script>
 
 {% endblock %}

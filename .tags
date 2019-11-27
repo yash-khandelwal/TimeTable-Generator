@@ -155,69 +155,6 @@ BatchAdmin	/home/sirkp/time_table/accounts/admin.py	/^class BatchAdmin(admin.Mod
 list_display	/home/sirkp/time_table/accounts/admin.py	/^    list_display = ['branch_sem','course_code','teacher_code','room','no_class_week','no_of_slots','course_schema']$/;"	variable	line:17	class:BatchAdmin
 ResultAdmin	/home/sirkp/time_table/accounts/admin.py	/^class ResultAdmin(admin.ModelAdmin):$/;"	class	line:19
 list_display	/home/sirkp/time_table/accounts/admin.py	/^    list_display = ['cse3','cse5','ece3','ece5','it3','it5']$/;"	variable	line:20	class:ResultAdmin
-link	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <link rel="stylesheet" href="{% static 'css\/table1.css' %}">$/;"	function	line:14
-link	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <link rel="stylesheet" href="{% static 'css\/table2.css' %}">$/;"	function	line:15
-style	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <style>$/;"	function	line:16
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    <div class="limiter">$/;"	function	line:26
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^      <div class="container-table100">$/;"	function	line:27
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^        <div class="wrap-table100">$/;"	function	line:28
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^          <div class="table100">$/;"	function	line:29
-table	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^            <table>$/;"	function	line:30
-thead	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^              <thead>$/;"	function	line:31
-tr	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                <tr class="table100-head">$/;"	function	line:32
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column1">Date\/Time<\/th>$/;"	function	line:33
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">8:30 - 9:20<\/th>$/;"	function	line:34
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">9:20 - 10:10<\/th>$/;"	function	line:35
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">10:10 - 11:00<\/th>$/;"	function	line:36
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">11:00 - 11:50<\/th>$/;"	function	line:37
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">11:50 - 12:40<\/th>$/;"	function	line:38
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">12:40 - 1:30<\/th>$/;"	function	line:39
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">1:30 - 2:20<\/th>$/;"	function	line:40
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">2:20 - 3:10<\/th>$/;"	function	line:41
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">3:10 - 4:00<\/th>$/;"	function	line:42
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">4:00 - 4:50<\/th>$/;"	function	line:43
-th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">4:50 - 5:40<\/th>$/;"	function	line:44
-tbody	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^              <tbody>$/;"	function	line:47
-tr	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <tr>$/;"	function	line:49
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column1">{{day}}<\/td>$/;"	function	line:50
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:53
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:54
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:60
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:61
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:67
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:68
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:74
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:75
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:81
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:82
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:88
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:89
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:95
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:96
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:102
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:103
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:109
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:110
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:116
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:117
-td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:123
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:124
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^            <div align="right" class="container">$/;"	function	line:132
-form	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^              <form action="{% url 'accounts:show_data' %}" method = "GET">$/;"	function	line:133
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                <div class="row register-form">$/;"	function	line:134
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-3"><\/div>$/;"	function	line:135
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-6">$/;"	function	line:136
-input	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <input type="hidden" id="id_batch" name="batch" value="{{batch}}">$/;"	function	line:137
-input	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <input onclick="get_updated_course_code(teachers,batch_id)" type="submit" name='search'style="background-color: white; color: black;" class="btnRegister" value="Save Changes">$/;"	function	line:138
-br	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <br><br>$/;"	function	line:140
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-3"><\/div>$/;"	function	line:141
-script	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <script>$/;"	function	line:150
-dragStart	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function dragStart(event) {$/;"	function	line:157
-allowDrop	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function allowDrop(event) {$/;"	function	line:208
-dragEnd	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^      function dragEnd(event) {$/;"	function	line:212
-drop	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function drop(event) {$/;"	function	line:218
-swapNodes	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    function swapNodes(node1, node2) {$/;"	function	line:275
-get_updated_course_code	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    function get_updated_course_code(teachers, batch_id){$/;"	function	line:284
 div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^  <div class="container"  style="background-color: #F2F3F4; border-radius: 5px; border-color: grey;"><br>$/;"	function	line:13
 div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^    <div class="container">$/;"	function	line:14
 div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^      <div class="row">$/;"	function	line:15
@@ -361,32 +298,100 @@ option	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^           
 option	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                    <option value="{{batch.branch_sem}}">{{batch.branch_sem}}<\/option>$/;"	function	line:122
 input	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                <input onclick="timeTable()" type="submit" name='search' class="btnRegister" value="Show Table">$/;"	function	line:126
 div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^              <div class="col-md-3"><\/div>$/;"	function	line:128
-get_batch_code	/home/sirkp/time_table/accounts/views.py	/^def get_batch_code(s):$/;"	function	line:35
-fetch_data	/home/sirkp/time_table/accounts/views.py	/^def fetch_data(request):$/;"	function	line:52
-show_data	/home/sirkp/time_table/accounts/views.py	/^def show_data(request):$/;"	function	line:153
-pass_value	/home/sirkp/time_table/accounts/views.py	/^def pass_value(request):$/;"	function	line:543
-Homepage	/home/sirkp/time_table/accounts/views.py	/^class Homepage(LoginRequiredMixin,ListView):$/;"	class	line:566
-login_url	/home/sirkp/time_table/accounts/views.py	/^    login_url = 'index'$/;"	variable	line:567	class:Homepage
-model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:568	class:Homepage
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/home.html'$/;"	variable	line:569	class:Homepage
-context_object_name	/home/sirkp/time_table/accounts/views.py	/^    context_object_name = 'batch_counts'$/;"	variable	line:570	class:Homepage
-get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:572	class:Homepage
-get_queryset	/home/sirkp/time_table/accounts/views.py	/^    def get_queryset(self):$/;"	member	line:581	class:Homepage
-AddBatch	/home/sirkp/time_table/accounts/views.py	/^class AddBatch(LoginRequiredMixin,CreateView):$/;"	class	line:585
-model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:586	class:AddBatch
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/add_batch.html'$/;"	variable	line:587	class:AddBatch
-fields	/home/sirkp/time_table/accounts/views.py	/^    fields = ('course_code','teacher_code','room','no_class_week','no_of_slots')$/;"	variable	line:588	class:AddBatch
-no_of_courses	/home/sirkp/time_table/accounts/views.py	/^    no_of_courses=0$/;"	variable	line:589	class:AddBatch
-success_url	/home/sirkp/time_table/accounts/views.py	/^    success_url = reverse_lazy('accounts:home')$/;"	variable	line:590	class:AddBatch
-branch_sem	/home/sirkp/time_table/accounts/views.py	/^    branch_sem = ''$/;"	variable	line:591	class:AddBatch
-get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:593	class:AddBatch
-post	/home/sirkp/time_table/accounts/views.py	/^    def post(self, request, *args, **kwargs):$/;"	member	line:613	class:AddBatch
-CustomLoginView	/home/sirkp/time_table/accounts/views.py	/^class CustomLoginView(LoginView,RedirectView):$/;"	class	line:652
-form_class	/home/sirkp/time_table/accounts/views.py	/^    form_class = LoginForm$/;"	variable	line:657	class:CustomLoginView
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/login.html'$/;"	variable	line:658	class:CustomLoginView
-get_redirect_url	/home/sirkp/time_table/accounts/views.py	/^    def get_redirect_url(self):$/;"	member	line:660	class:CustomLoginView
-signup	/home/sirkp/time_table/accounts/views.py	/^def signup(request):$/;"	function	line:666
-activate	/home/sirkp/time_table/accounts/views.py	/^def activate(request, uidb64, token):$/;"	function	line:692
 br	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^<br><br>$/;"	function	line:13
 div	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^<div class="container">$/;"	function	line:15
 p	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^  <p>$/;"	function	line:16
+br	/home/sirkp/time_table/accounts/templates/accounts/active_done.html	/^<br><br>$/;"	function	line:13
+div	/home/sirkp/time_table/accounts/templates/accounts/active_done.html	/^<div class="container">$/;"	function	line:15
+p	/home/sirkp/time_table/accounts/templates/accounts/active_done.html	/^  <p>$/;"	function	line:16
+link	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <link rel="stylesheet" href="{% static 'css\/table1.css' %}">$/;"	function	line:14
+link	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <link rel="stylesheet" href="{% static 'css\/table2.css' %}">$/;"	function	line:15
+style	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <style>$/;"	function	line:16
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    <div class="limiter">$/;"	function	line:26
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^      <div class="container-table100">$/;"	function	line:27
+h	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^        <h1><font color="white">Timetable for {{batch}}<\/font><\/h1>$/;"	function	line:28
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^        <div class="wrap-table100">$/;"	function	line:29
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^          <div class="table100">$/;"	function	line:30
+table	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^            <table>$/;"	function	line:31
+thead	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^              <thead>$/;"	function	line:32
+tr	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                <tr class="table100-head">$/;"	function	line:33
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column1">Date\/Time<\/th>$/;"	function	line:34
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">8:30 - 9:20<\/th>$/;"	function	line:35
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">9:20 - 10:10<\/th>$/;"	function	line:36
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">10:10 - 11:00<\/th>$/;"	function	line:37
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">11:00 - 11:50<\/th>$/;"	function	line:38
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">11:50 - 12:40<\/th>$/;"	function	line:39
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">12:40 - 1:30<\/th>$/;"	function	line:40
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">1:30 - 2:20<\/th>$/;"	function	line:41
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">2:20 - 3:10<\/th>$/;"	function	line:42
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">3:10 - 4:00<\/th>$/;"	function	line:43
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">4:00 - 4:50<\/th>$/;"	function	line:44
+th	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <th class="column2">4:50 - 5:40<\/th>$/;"	function	line:45
+tbody	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^              <tbody>$/;"	function	line:48
+tr	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <tr>$/;"	function	line:50
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column1">{{day}}<\/td>$/;"	function	line:51
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:54
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:55
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:61
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:62
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:68
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:69
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:75
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:76
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:82
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:83
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:89
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:90
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:96
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:97
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:103
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:104
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:110
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:111
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:117
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:118
+td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:124
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher|get_at_index:batch_code}}<\/p><\/div>$/;"	function	line:125
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^            <div align="right" class="container">$/;"	function	line:133
+form	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^              <form action="{% url 'accounts:show_data' %}" method = "GET">$/;"	function	line:134
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                <div class="row register-form">$/;"	function	line:135
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-3"><\/div>$/;"	function	line:136
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-6">$/;"	function	line:137
+input	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <input type="hidden" id="id_batch" name="batch" value="{{batch}}">$/;"	function	line:138
+input	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <input onclick="get_updated_course_code(teachers,batch_id)" type="submit" name='search'style="background-color: white; color: black;" class="btnRegister" value="Save Changes">$/;"	function	line:139
+br	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <br><br>$/;"	function	line:141
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-3"><\/div>$/;"	function	line:142
+script	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <script>$/;"	function	line:151
+dragStart	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function dragStart(event) {$/;"	function	line:158
+allowDrop	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function allowDrop(event) {$/;"	function	line:209
+dragEnd	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^      function dragEnd(event) {$/;"	function	line:213
+drop	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function drop(event) {$/;"	function	line:219
+swapNodes	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    function swapNodes(node1, node2) {$/;"	function	line:276
+get_updated_course_code	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    function get_updated_course_code(teachers, batch_id){$/;"	function	line:285
+get_batch_code	/home/sirkp/time_table/accounts/views.py	/^def get_batch_code(s):$/;"	function	line:35
+fetch_data	/home/sirkp/time_table/accounts/views.py	/^def fetch_data(request):$/;"	function	line:52
+show_data	/home/sirkp/time_table/accounts/views.py	/^def show_data(request):$/;"	function	line:153
+pass_value	/home/sirkp/time_table/accounts/views.py	/^def pass_value(request):$/;"	function	line:547
+Homepage	/home/sirkp/time_table/accounts/views.py	/^class Homepage(LoginRequiredMixin,ListView):$/;"	class	line:570
+login_url	/home/sirkp/time_table/accounts/views.py	/^    login_url = 'index'$/;"	variable	line:571	class:Homepage
+model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:572	class:Homepage
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/home.html'$/;"	variable	line:573	class:Homepage
+context_object_name	/home/sirkp/time_table/accounts/views.py	/^    context_object_name = 'batch_counts'$/;"	variable	line:574	class:Homepage
+get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:576	class:Homepage
+get_queryset	/home/sirkp/time_table/accounts/views.py	/^    def get_queryset(self):$/;"	member	line:585	class:Homepage
+AddBatch	/home/sirkp/time_table/accounts/views.py	/^class AddBatch(LoginRequiredMixin,CreateView):$/;"	class	line:589
+model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:590	class:AddBatch
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/add_batch.html'$/;"	variable	line:591	class:AddBatch
+fields	/home/sirkp/time_table/accounts/views.py	/^    fields = ('course_code','teacher_code','room','no_class_week','no_of_slots')$/;"	variable	line:592	class:AddBatch
+no_of_courses	/home/sirkp/time_table/accounts/views.py	/^    no_of_courses=0$/;"	variable	line:593	class:AddBatch
+success_url	/home/sirkp/time_table/accounts/views.py	/^    success_url = reverse_lazy('accounts:home')$/;"	variable	line:594	class:AddBatch
+branch_sem	/home/sirkp/time_table/accounts/views.py	/^    branch_sem = ''$/;"	variable	line:595	class:AddBatch
+get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:597	class:AddBatch
+post	/home/sirkp/time_table/accounts/views.py	/^    def post(self, request, *args, **kwargs):$/;"	member	line:617	class:AddBatch
+CustomLoginView	/home/sirkp/time_table/accounts/views.py	/^class CustomLoginView(LoginView,RedirectView):$/;"	class	line:656
+form_class	/home/sirkp/time_table/accounts/views.py	/^    form_class = LoginForm$/;"	variable	line:661	class:CustomLoginView
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/login.html'$/;"	variable	line:662	class:CustomLoginView
+get_redirect_url	/home/sirkp/time_table/accounts/views.py	/^    def get_redirect_url(self):$/;"	member	line:664	class:CustomLoginView
+signup	/home/sirkp/time_table/accounts/views.py	/^def signup(request):$/;"	function	line:670
+activate	/home/sirkp/time_table/accounts/views.py	/^def activate(request, uidb64, token):$/;"	function	line:696
+h	/home/sirkp/time_table/templates/admin/base_site.html	/^<h1 id="site-name"><a href="{% url 'admin:index' %}">TimeTable Admin<\/a><\/h1>$/;"	function	line:6

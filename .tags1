@@ -4,6 +4,4 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-br	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^<br><br>$/;"	function	line:13
-div	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^<div class="container">$/;"	function	line:15
-p	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^  <p>$/;"	function	line:16
+h	/home/sirkp/time_table/templates/admin/base_site.html	/^<h1 id="site-name"><a href="{% url 'admin:index' %}">TimeTable Admin<\/a><\/h1>$/;"	function	line:6

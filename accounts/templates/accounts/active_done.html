@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% load staticfiles %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block title %}
+Password Reset Done
+{% endblock %}
+
+{% block body %}
+
+<br><br>
+
+<div class="container">
+  <p>
+    Thank you for your email confirmation. Now you can <a href="{% url 'index' %}">Log in</a> your account.
+  </p>
+</div>
+
+
+{% endblock %}

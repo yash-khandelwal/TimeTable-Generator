@@ -215,6 +215,9 @@ def show_data(request):
         return JsonResponse({ 'success': True,'url': reverse_lazy('accounts:show_data') })
 
     sleep(1)
+    while(Result.objects.all().count()!=55):
+        sleep(1)
+
     print('after    update')
     batch = request.GET.get('batch')
     batch_code = get_batch_code(batch)
@@ -222,14 +225,15 @@ def show_data(request):
     print(batch)
 
     res_batch = Result.objects.values(batch.lower())
+    print(res_batch.count())
     courses = []
     for i in range(res_batch.count()):
         course = [v for k,v in res_batch[i].items()][0]
-        if(course=='0'):
+        if(course=='0'):#change if priyank wants 0 in empty slots
             course = ''
         courses.append(course)
-
     print(courses)
+    # return HttpResponse('Bolo Azadi')
     results = list(Result.objects.all())
     teachers = []
     for i in range(len(results)):
@@ -701,6 +705,6 @@ def activate(request, uidb64, token):
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
+        return render(request, 'accounts/active_done.html')
     else:
         return HttpResponse('Activation link is invalid!')

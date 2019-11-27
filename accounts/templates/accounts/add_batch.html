@@ -18,7 +18,7 @@ sign up
         </div>
       </div>
     </div>
-  </div>
+  </div><br>
     <div class="container">
       <form action="{% url 'accounts:add_batch' %}" method = "POST">
         {% csrf_token %}
@@ -64,6 +64,7 @@ sign up
          <input type="hidden" id="id_branch_sem" name="branch_sem" value="{{branch_sem}}">
          <input type="hidden" id="id_course_schema" name="course_schema" value="{{course_schema}}">
         <input type="submit" class="btn btn-primary" value="Add">
+        <br><br>
       </form>
     </div>
 

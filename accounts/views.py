@@ -29,6 +29,7 @@ from django.shortcuts import render_to_response
 import json
 from django import template
 from time import sleep
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def get_batch_code(s):
@@ -47,6 +48,7 @@ def get_batch_code(s):
     s_2 = int(s_2,10)-1
     return batch_code+s_2
 
+@login_required(login_url='index')
 def fetch_data(request):
     if request.is_ajax():
         data = request.POST.get("param")
@@ -147,6 +149,7 @@ def fetch_data(request):
             return JsonResponse({ 'success': True })
     return HttpResponseBadRequest()
 
+@login_required(login_url='index')
 def show_data(request):
     results = list(Result.objects.all())
     if request.is_ajax():#get data after swapping
@@ -536,6 +539,7 @@ def show_data(request):
     days = ['Mon', 'Tue', 'Wed', 'Thu', 'Sat']
     return render(request, 'accounts/show_data.html', {'courses':courses,'days':days, 'teachers':teachers,'batch_code':batch_code ,'rooms':rooms,'batch':batch})
 
+@login_required(login_url='index')
 def pass_value(request):
     batches = request.GET.getlist('batches')
     batch = Batch.objects.filter(branch_sem__in=batches)
@@ -578,7 +582,7 @@ class Homepage(LoginRequiredMixin,ListView):
         batch_count = Batch.objects.all().values('branch_sem','course_schema').annotate(total=Count('branch_sem'))
         return batch_count
 
-class AddBatch(CreateView):
+class AddBatch(LoginRequiredMixin,CreateView):
     model = Batch
     template_name = 'accounts/add_batch.html'
     fields = ('course_code','teacher_code','room','no_class_week','no_of_slots')

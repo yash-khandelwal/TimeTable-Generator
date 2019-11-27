@@ -129,6 +129,19 @@ sign up
                   {% endfor %}
               </tbody>
             </table>
+            <div align="right" class="container">
+              <form action="{% url 'accounts:show_data' %}" method = "GET">
+                <div class="row register-form">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6">
+                    <input type="hidden" id="id_batch" name="batch" value="{{batch}}">
+                    <input onclick="get_updated_course_code(teachers,batch_id)" type="submit" name='search'style="background-color: white; color: black;" class="btnRegister" value="Save Changes">
+                  </div>
+                  <br><br>
+                  <div class="col-md-3"></div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -295,18 +308,6 @@ sign up
 
 
   </script>
-  <div class="container">
-    <form action="{% url 'accounts:show_data' %}" method = "GET">
-      <div class="row register-form">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <input type="hidden" id="id_batch" name="batch" value="{{batch}}">
-          <input onclick="get_updated_course_code(teachers,batch_id)" type="submit" name='search' class="btnRegister" value="Save Changes">
-        </div>
-        <br><br>
-        <div class="col-md-3"></div>
-      </div>
-    </form>
-  </div>
+
 
 {% endblock %}

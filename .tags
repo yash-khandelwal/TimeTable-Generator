@@ -1,33 +1,3 @@
-html	/home/sirkp/time_table/templates/base.html	/^<html lang="en" dir="ltr">$/;"	function	line:3
-head	/home/sirkp/time_table/templates/base.html	/^  <head>$/;"	function	line:4
-link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'bootstrap\/css\/bootstrap.min.css' %}">$/;"	function	line:5
-link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'css\/font-awesome.min.css' %}">$/;"	function	line:6
-link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'css\/imagehover.min.css' %}">$/;"	function	line:7
-link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'css\/style.css' %}">$/;"	function	line:8
-link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'css\/my.css' %}">$/;"	function	line:9
-link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" type="text\/css" href="https:\/\/fonts.googleapis.com\/css?family=Open+Sans|Candal|Alegreya+Sans">$/;"	function	line:10
-script	/home/sirkp/time_table/templates/base.html	/^    <script src="{% static 'jquery\/jquery-3.4.1.min.js' %}"><\/script>$/;"	function	line:13
-script	/home/sirkp/time_table/templates/base.html	/^    <script src="{% static 'ajax\/popper.min.js' %}"><\/script>$/;"	function	line:14
-script	/home/sirkp/time_table/templates/base.html	/^    <script src="{% static 'bootstrap\/js\/bootstrap.min.js' %}"><\/script>$/;"	function	line:15
-script	/home/sirkp/time_table/templates/base.html	/^    <script src="https:\/\/code.jquery.com\/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"><\/script>$/;"	function	line:16
-meta	/home/sirkp/time_table/templates/base.html	/^    <meta charset="utf-8">$/;"	function	line:26
-title	/home/sirkp/time_table/templates/base.html	/^    <title>$/;"	function	line:28
-body	/home/sirkp/time_table/templates/base.html	/^    <body>$/;"	function	line:34
-nav	/home/sirkp/time_table/templates/base.html	/^      <nav class="navbar navbar-expand-lg navbar-dark primary-color myregister">$/;"	function	line:37
-a	/home/sirkp/time_table/templates/base.html	/^        <a class="navbar-brand" href="">Time Table<\/a>$/;"	function	line:40
-div	/home/sirkp/time_table/templates/base.html	/^        <div class="navbar-collapse" id="basicExampleNav">$/;"	function	line:45
-ul	/home/sirkp/time_table/templates/base.html	/^          <ul class="navbar-nav mr-auto">$/;"	function	line:48
-li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item active">$/;"	function	line:49
-a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="{% url 'accounts:home' %}"><font style="color: white;">Home<\/font><\/a>$/;"	function	line:50
-li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item">$/;"	function	line:52
-a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="http:\/\/iiitu.ac.in\/"><font style="color: white;">IIIT Una<\/font><\/a>$/;"	function	line:53
-li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item">$/;"	function	line:55
-a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="{% url 'admin:index' %}"><font style="color: white;">Admin<\/font><\/a>$/;"	function	line:56
-li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item">$/;"	function	line:58
-a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="{% url 'accounts:logout' %}"><font style="color: white;">Logout<\/font><\/a>$/;"	function	line:60
-form	/home/sirkp/time_table/templates/base.html	/^          <form class="form-inline">$/;"	function	line:69
-div	/home/sirkp/time_table/templates/base.html	/^            <div class="md-form my-0">$/;"	function	line:70
-input	/home/sirkp/time_table/templates/base.html	/^              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">$/;"	function	line:71
 script	/home/sirkp/time_table/accounts/templates/accounts/signup.html	/^  <script>$/;"	function	line:8
 redirect	/home/sirkp/time_table/accounts/templates/accounts/signup.html	/^    function redirect(){$/;"	function	line:9
 div	/home/sirkp/time_table/accounts/templates/accounts/signup.html	/^  <div class="register">$/;"	function	line:20
@@ -185,126 +155,6 @@ BatchAdmin	/home/sirkp/time_table/accounts/admin.py	/^class BatchAdmin(admin.Mod
 list_display	/home/sirkp/time_table/accounts/admin.py	/^    list_display = ['branch_sem','course_code','teacher_code','room','no_class_week','no_of_slots','course_schema']$/;"	variable	line:17	class:BatchAdmin
 ResultAdmin	/home/sirkp/time_table/accounts/admin.py	/^class ResultAdmin(admin.ModelAdmin):$/;"	class	line:19
 list_display	/home/sirkp/time_table/accounts/admin.py	/^    list_display = ['cse3','cse5','ece3','ece5','it3','it5']$/;"	variable	line:20	class:ResultAdmin
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^  <div class="container"  style="background-color: #F2F3F4; border-radius: 5px; border-color: grey;"><br>$/;"	function	line:13
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^    <div class="container">$/;"	function	line:14
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^      <div class="row">$/;"	function	line:15
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^        <div class="col-md-3">$/;"	function	line:16
-font	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <font style="font-size: 25px; font-family: Helvetica;">Add batch<\/font><hr>$/;"	function	line:17
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^    <div class="container">$/;"	function	line:22
-form	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^      <form action="{% url 'accounts:add_batch' %}" method = "POST">$/;"	function	line:23
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^        <div>$/;"	function	line:26
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="row">$/;"	function	line:27
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <div class="form-group col-md-6">$/;"	function	line:28
-select	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^              <select name="course_code{{forloop.counter}}" class="form-control" id="id_course_code{{forloop.counter}}">$/;"	function	line:29
-option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^                <option value="{{course.course_code}}">{{course.course_name}}({{course.course_code}})<\/option>$/;"	function	line:30
-option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^                <option value="{{c.course_code}}">{{c.course_name}}({{c.course_code}})<\/option>$/;"	function	line:32
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <div class="form-group col-md-6">$/;"	function	line:36
-select	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^              <select name="teacher_code{{forloop.counter}}" class="form-control" id="id_teacher{{forloop.counter}}">$/;"	function	line:37
-option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^                <option value="">Teacher<\/option>$/;"	function	line:38
-option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^                <option value="{{teacher.teacher_code}}">{{teacher.first_name}} {{teacher.last_name}}({{teacher.teacher_code}})<\/option>$/;"	function	line:40
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="row">$/;"	function	line:45
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="form-group col-md-4">$/;"	function	line:46
-select	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <select name="room{{forloop.counter}}" class="form-control" id="id_room{{forloop.counter}}">$/;"	function	line:47
-option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^              <option value="">Select<\/option>$/;"	function	line:48
-option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^              <option value="{{room}}">{{room}}<\/option>$/;"	function	line:50
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="form-group col-md-4">$/;"	function	line:54
-input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <input type="number" name="no_class_week{{forloop.counter}}" class="form-control" placeholder="No of class week" title="" required="" id="id_no_class_week{{forloop.counter}}">$/;"	function	line:55
-div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="form-group col-md-4">$/;"	function	line:57
-input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <input type="number" name="no_of_slots{{forloop.counter}}" class="form-control" placeholder="No of slots" title="" required="" id="id_no_of_slots{{forloop.counter}}">$/;"	function	line:58
-input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^         <input type="hidden" id="id_no_of_courses" name="no_of_courses" value="{{courses.count}}">$/;"	function	line:63
-input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^         <input type="hidden" id="id_branch_sem" name="branch_sem" value="{{branch_sem}}">$/;"	function	line:64
-input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^         <input type="hidden" id="id_course_schema" name="course_schema" value="{{course_schema}}">$/;"	function	line:65
-input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^        <input type="submit" class="btn btn-primary" value="Add">$/;"	function	line:66
-link	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^  <link rel="stylesheet" href="{% static 'css\/main.css' %}">$/;"	function	line:7
-link	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^  <link rel="stylesheet" href="{% static 'css\/util.css' %}">$/;"	function	line:8
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^  <div class="row">$/;"	function	line:16
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^    <div class="col-md-6 limiter">$/;"	function	line:17
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <div class="container-table100">$/;"	function	line:18
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="wrap-table100">$/;"	function	line:19
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^          <div class="table100 ver1 m-b-110">$/;"	function	line:20
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^            <div class="table100-head">$/;"	function	line:21
-table	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <table>$/;"	function	line:22
-thead	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <thead>$/;"	function	line:23
-tr	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <tr class="row100 head">$/;"	function	line:24
-th	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">S.No<\/th>$/;"	function	line:25
-th	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">Batch<\/th>$/;"	function	line:26
-th	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">Courses<\/th>$/;"	function	line:27
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^            <div class="table100-body">$/;"	function	line:33
-table	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <table>$/;"	function	line:34
-tbody	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <tbody>$/;"	function	line:35
-tr	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <tr class="row100 body">$/;"	function	line:37
-td	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{ forloop.counter }}<\/td>$/;"	function	line:38
-td	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{batch_count.branch_sem}}<\/td>$/;"	function	line:39
-td	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{batch_count.total}}<\/td>$/;"	function	line:40
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^    <div class="col-md-4 container">$/;"	function	line:50
-br	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <br>$/;"	function	line:51
-br	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <br>$/;"	function	line:52
-center	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <center><h1>ADD BATCH<\/h1><\/center>$/;"	function	line:53
-form	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <form action="{% url 'accounts:add_batch' %}" method = "GET">$/;"	function	line:54
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="">$/;"	function	line:55
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <div class="form-group"><label for="id_branch">Branch<\/label><select name="branch" class="form-control" id="branch">$/;"	function	line:56
-option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <option value="">Select<\/option>$/;"	function	line:57
-option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <option value="{{branch.branch_code}}">{{branch.branch_code}}<\/option>$/;"	function	line:59
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <div class="form-group"><label for="id_sem">Sem<\/label><select name="sem" class="form-control" id="id_sem"">$/;"	function	line:64
-option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <option value="">Select<\/option>$/;"	function	line:65
-option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <option value="{{forloop.counter}}">{{forloop.counter}}<\/option>$/;"	function	line:67
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <div class="form-group">$/;"	function	line:72
-label	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <label for="id_course_schema">Course Schema<\/label>$/;"	function	line:73
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <div class="form-group">$/;"	function	line:74
-select	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <select name="course_schema" class="form-control" id="id_course_schema">$/;"	function	line:75
-option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                      <option value="">Course Intro year<\/option>$/;"	function	line:76
-option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                      <option value="{{year}}">{{year}}<\/option>$/;"	function	line:78
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <div class="form-group">$/;"	function	line:84
-center	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <center>$/;"	function	line:85
-input	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <input type="submit" name='search' class="btn btn-primary " value=" Add ">$/;"	function	line:86
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^    <div class="col-md-1"><\/div>$/;"	function	line:92
-form	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^  <form action="{% url 'accounts:pass_value' %}" method = "GET">$/;"	function	line:97
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^    <div class="container">$/;"	function	line:98
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <div class="container row">$/;"	function	line:99
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="col-md-4"><\/div>$/;"	function	line:100
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="col-md-4">$/;"	function	line:101
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^          <div class="form-group ">$/;"	function	line:102
-select	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^            <select multiple name="batches" class="form-control" id="id_batches">$/;"	function	line:103
-option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <option value="">Select Batches<\/option>$/;"	function	line:104
-option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <option value="{{batch_count.branch_sem}}">{{batch_count.branch_sem}}<\/option>$/;"	function	line:106
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="col-md-4">$/;"	function	line:111
-div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^          <div class="form-group">$/;"	function	line:112
-input	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <input type="submit" name='search' class="btn btn-primary " value="Generate Table">$/;"	function	line:113
-script	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^  <script src="{% static 'js\/function.js' %}"><\/script>$/;"	function	line:8
-script	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^<script type="text\/javascript">$/;"	function	line:16
-timeTable	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^  function timeTable()$/;"	function	line:19
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^<div class="register">$/;"	function	line:96
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^  <div class="row">$/;"	function	line:97
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^    <div class="col-md-3 register-left">$/;"	function	line:99
-img	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <img src="https:\/\/image.ibb.co\/n7oTvU\/logo_white.png" alt=""\/>$/;"	function	line:100
-h	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <h3><font color="white">Welcome<\/font><\/h3>$/;"	function	line:101
-p	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <p>You are 30 seconds away from from making timetable<\/p>$/;"	function	line:102
-input	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <input type="submit" onclick="redirect()" href="" value="Register"\/>$/;"	function	line:103
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^    <div class="col-md-9 register-right">$/;"	function	line:106
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <div class="tab-content" id="myTabContent">$/;"	function	line:107
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^        <div id="home" role="tabpanel" aria-labelledby="home-tab">$/;"	function	line:108
-h	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^          <h3 class="register-heading">Select a Batch<\/h3>$/;"	function	line:109
-form	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^          <form action="{% url 'accounts:show_data' %}" method = "GET">$/;"	function	line:110
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^            <div class="row register-form">$/;"	function	line:111
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^              <div class="col-md-3"><\/div>$/;"	function	line:112
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^              <div class="col-md-6">$/;"	function	line:113
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                <div class="form-group ">$/;"	function	line:114
-select	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                  <select name="batch" class="form-control" id="id_batch">$/;"	function	line:115
-option	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                    <option value="">Select Batch<\/option>$/;"	function	line:116
-option	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                    <option value="{{batch.branch_sem}}">{{batch.branch_sem}}<\/option>$/;"	function	line:118
-input	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                <input onclick="timeTable()" type="submit" name='search' class="btnRegister" value="Show Table">$/;"	function	line:122
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^              <div class="col-md-3"><\/div>$/;"	function	line:124
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^  <div class="container">$/;"	function	line:134
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^    <div class="container row">$/;"	function	line:135
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <div class="col-md-4"><\/div>$/;"	function	line:136
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <div class="col-md-4">$/;"	function	line:137
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^        <div class="form-group ">$/;"	function	line:138
-select	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^          <select name="batch" class="form-control" id="id_batch">$/;"	function	line:139
-option	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^            <option value="">Select Batch<\/option>$/;"	function	line:140
-option	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^            <option value="{{ forloop.counter0 }}">{{batch_count.branch_sem}}<\/option>$/;"	function	line:142
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <div class="col-md-4">$/;"	function	line:147
-div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^        <div class="form-group">$/;"	function	line:148
-input	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^            <input onclick="timeTable()" type="submit" name='search' class="btn btn-primary " value="Show Table">$/;"	function	line:149
 link	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <link rel="stylesheet" href="{% static 'css\/table1.css' %}">$/;"	function	line:14
 link	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <link rel="stylesheet" href="{% static 'css\/table2.css' %}">$/;"	function	line:15
 style	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <style>$/;"	function	line:16
@@ -352,45 +202,191 @@ td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^         
 div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:117
 td	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <td class="column2">$/;"	function	line:123
 div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                      <div class="subject" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id={{i}}><br>{{course}}<br>{{teacher.2}}<\/p><\/div>$/;"	function	line:124
-script	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <script>$/;"	function	line:137
-dragStart	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function dragStart(event) {$/;"	function	line:144
-allowDrop	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function allowDrop(event) {$/;"	function	line:195
-dragEnd	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^      function dragEnd(event) {$/;"	function	line:199
-drop	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function drop(event) {$/;"	function	line:205
-swapNodes	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    function swapNodes(node1, node2) {$/;"	function	line:262
-get_updated_course_code	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    function get_updated_course_code(teachers, batch_id){$/;"	function	line:271
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <div class="container">$/;"	function	line:298
-form	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    <form action="{% url 'accounts:show_data' %}" method = "GET">$/;"	function	line:299
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^      <div class="row register-form">$/;"	function	line:300
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^        <div class="col-md-3"><\/div>$/;"	function	line:301
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^        <div class="col-md-6">$/;"	function	line:302
-input	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^          <input type="hidden" id="id_batch" name="batch" value="{{batch}}">$/;"	function	line:303
-input	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^          <input onclick="get_updated_course_code(teachers,batch_id)" type="submit" name='search' class="btnRegister" value="Save Changes">$/;"	function	line:304
-br	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^        <br><br>$/;"	function	line:306
-div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^        <div class="col-md-3"><\/div>$/;"	function	line:307
-get_batch_code	/home/sirkp/time_table/accounts/views.py	/^def get_batch_code(s):$/;"	function	line:34
-fetch_data	/home/sirkp/time_table/accounts/views.py	/^def fetch_data(request):$/;"	function	line:50
-show_data	/home/sirkp/time_table/accounts/views.py	/^def show_data(request):$/;"	function	line:150
-pass_value	/home/sirkp/time_table/accounts/views.py	/^def pass_value(request):$/;"	function	line:539
-Homepage	/home/sirkp/time_table/accounts/views.py	/^class Homepage(LoginRequiredMixin,ListView):$/;"	class	line:562
-login_url	/home/sirkp/time_table/accounts/views.py	/^    login_url = 'index'$/;"	variable	line:563	class:Homepage
-model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:564	class:Homepage
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/home.html'$/;"	variable	line:565	class:Homepage
-context_object_name	/home/sirkp/time_table/accounts/views.py	/^    context_object_name = 'batch_counts'$/;"	variable	line:566	class:Homepage
-get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:568	class:Homepage
-get_queryset	/home/sirkp/time_table/accounts/views.py	/^    def get_queryset(self):$/;"	member	line:577	class:Homepage
-AddBatch	/home/sirkp/time_table/accounts/views.py	/^class AddBatch(CreateView):$/;"	class	line:581
-model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:582	class:AddBatch
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/add_batch.html'$/;"	variable	line:583	class:AddBatch
-fields	/home/sirkp/time_table/accounts/views.py	/^    fields = ('course_code','teacher_code','room','no_class_week','no_of_slots')$/;"	variable	line:584	class:AddBatch
-no_of_courses	/home/sirkp/time_table/accounts/views.py	/^    no_of_courses=0$/;"	variable	line:585	class:AddBatch
-success_url	/home/sirkp/time_table/accounts/views.py	/^    success_url = reverse_lazy('accounts:home')$/;"	variable	line:586	class:AddBatch
-branch_sem	/home/sirkp/time_table/accounts/views.py	/^    branch_sem = ''$/;"	variable	line:587	class:AddBatch
-get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:589	class:AddBatch
-post	/home/sirkp/time_table/accounts/views.py	/^    def post(self, request, *args, **kwargs):$/;"	member	line:609	class:AddBatch
-CustomLoginView	/home/sirkp/time_table/accounts/views.py	/^class CustomLoginView(LoginView,RedirectView):$/;"	class	line:648
-form_class	/home/sirkp/time_table/accounts/views.py	/^    form_class = LoginForm$/;"	variable	line:653	class:CustomLoginView
-template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/login.html'$/;"	variable	line:654	class:CustomLoginView
-get_redirect_url	/home/sirkp/time_table/accounts/views.py	/^    def get_redirect_url(self):$/;"	member	line:656	class:CustomLoginView
-signup	/home/sirkp/time_table/accounts/views.py	/^def signup(request):$/;"	function	line:662
-activate	/home/sirkp/time_table/accounts/views.py	/^def activate(request, uidb64, token):$/;"	function	line:688
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^            <div align="right" class="container">$/;"	function	line:132
+form	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^              <form action="{% url 'accounts:show_data' %}" method = "GET">$/;"	function	line:133
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                <div class="row register-form">$/;"	function	line:134
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-3"><\/div>$/;"	function	line:135
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-6">$/;"	function	line:136
+input	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <input type="hidden" id="id_batch" name="batch" value="{{batch}}">$/;"	function	line:137
+input	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                    <input onclick="get_updated_course_code(teachers,batch_id)" type="submit" name='search'style="background-color: white; color: black;" class="btnRegister" value="Save Changes">$/;"	function	line:138
+br	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <br><br>$/;"	function	line:140
+div	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^                  <div class="col-md-3"><\/div>$/;"	function	line:141
+script	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^  <script>$/;"	function	line:150
+dragStart	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function dragStart(event) {$/;"	function	line:157
+allowDrop	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function allowDrop(event) {$/;"	function	line:208
+dragEnd	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^      function dragEnd(event) {$/;"	function	line:212
+drop	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    	function drop(event) {$/;"	function	line:218
+swapNodes	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    function swapNodes(node1, node2) {$/;"	function	line:275
+get_updated_course_code	/home/sirkp/time_table/accounts/templates/accounts/show_data.html	/^    function get_updated_course_code(teachers, batch_id){$/;"	function	line:284
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^  <div class="container"  style="background-color: #F2F3F4; border-radius: 5px; border-color: grey;"><br>$/;"	function	line:13
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^    <div class="container">$/;"	function	line:14
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^      <div class="row">$/;"	function	line:15
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^        <div class="col-md-3">$/;"	function	line:16
+font	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <font style="font-size: 25px; font-family: Helvetica;">Add batch<\/font><hr>$/;"	function	line:17
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^    <div class="container">$/;"	function	line:22
+form	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^      <form action="{% url 'accounts:add_batch' %}" method = "POST">$/;"	function	line:23
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^        <div>$/;"	function	line:26
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="row">$/;"	function	line:27
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <div class="form-group col-md-6">$/;"	function	line:28
+select	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^              <select name="course_code{{forloop.counter}}" class="form-control" id="id_course_code{{forloop.counter}}">$/;"	function	line:29
+option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^                <option value="{{course.course_code}}">{{course.course_name}}({{course.course_code}})<\/option>$/;"	function	line:30
+option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^                <option value="{{c.course_code}}">{{c.course_name}}({{c.course_code}})<\/option>$/;"	function	line:32
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <div class="form-group col-md-6">$/;"	function	line:36
+select	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^              <select name="teacher_code{{forloop.counter}}" class="form-control" id="id_teacher{{forloop.counter}}">$/;"	function	line:37
+option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^                <option value="">Teacher<\/option>$/;"	function	line:38
+option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^                <option value="{{teacher.teacher_code}}">{{teacher.first_name}} {{teacher.last_name}}({{teacher.teacher_code}})<\/option>$/;"	function	line:40
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="row">$/;"	function	line:45
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="form-group col-md-4">$/;"	function	line:46
+select	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <select name="room{{forloop.counter}}" class="form-control" id="id_room{{forloop.counter}}">$/;"	function	line:47
+option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^              <option value="">Select<\/option>$/;"	function	line:48
+option	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^              <option value="{{room}}">{{room}}<\/option>$/;"	function	line:50
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="form-group col-md-4">$/;"	function	line:54
+input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <input type="number" name="no_class_week{{forloop.counter}}" class="form-control" placeholder="No of class week" title="" required="" id="id_no_class_week{{forloop.counter}}">$/;"	function	line:55
+div	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^          <div class="form-group col-md-4">$/;"	function	line:57
+input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^            <input type="number" name="no_of_slots{{forloop.counter}}" class="form-control" placeholder="No of slots" title="" required="" id="id_no_of_slots{{forloop.counter}}">$/;"	function	line:58
+input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^         <input type="hidden" id="id_no_of_courses" name="no_of_courses" value="{{courses.count}}">$/;"	function	line:63
+input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^         <input type="hidden" id="id_branch_sem" name="branch_sem" value="{{branch_sem}}">$/;"	function	line:64
+input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^         <input type="hidden" id="id_course_schema" name="course_schema" value="{{course_schema}}">$/;"	function	line:65
+input	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^        <input type="submit" class="btn btn-primary" value="Add">$/;"	function	line:66
+br	/home/sirkp/time_table/accounts/templates/accounts/add_batch.html	/^        <br><br>$/;"	function	line:67
+link	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^  <link rel="stylesheet" href="{% static 'css\/main.css' %}">$/;"	function	line:7
+link	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^  <link rel="stylesheet" href="{% static 'css\/util.css' %}">$/;"	function	line:8
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^  <div class="row">$/;"	function	line:16
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^    <div class="col-md-6 limiter">$/;"	function	line:17
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <div class="container-table100">$/;"	function	line:18
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="wrap-table100">$/;"	function	line:19
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^          <div class="table100 ver1 m-b-110">$/;"	function	line:20
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^            <div class="table100-head">$/;"	function	line:21
+table	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <table>$/;"	function	line:22
+thead	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <thead>$/;"	function	line:23
+tr	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <tr class="row100 head">$/;"	function	line:24
+th	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">S.No<\/th>$/;"	function	line:25
+th	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">Batch<\/th>$/;"	function	line:26
+th	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <th style="text-align: center; vertical-align: middle;" class="cell100 column2">Courses<\/th>$/;"	function	line:27
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^            <div class="table100-body">$/;"	function	line:33
+table	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <table>$/;"	function	line:34
+tbody	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <tbody>$/;"	function	line:35
+tr	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <tr class="row100 body">$/;"	function	line:37
+td	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{ forloop.counter }}<\/td>$/;"	function	line:38
+td	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{batch_count.branch_sem}}<\/td>$/;"	function	line:39
+td	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <td style="text-align: center; vertical-align: middle;" class="cell100 column2">{{batch_count.total}}<\/td>$/;"	function	line:40
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^    <div class="col-md-4 container">$/;"	function	line:50
+br	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <br>$/;"	function	line:51
+br	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <br>$/;"	function	line:52
+center	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <center><h1>ADD BATCH<\/h1><\/center>$/;"	function	line:53
+form	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <form action="{% url 'accounts:add_batch' %}" method = "GET">$/;"	function	line:54
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="">$/;"	function	line:55
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <div class="form-group"><label for="id_branch">Branch<\/label><select required name="branch" class="form-control" id="branch">$/;"	function	line:56
+option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <option value="">Select<\/option>$/;"	function	line:57
+option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <option value="{{branch.branch_code}}">{{branch.branch_code}}<\/option>$/;"	function	line:59
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <div class="form-group"><label for="id_sem">Sem<\/label><select required name="sem" class="form-control" id="id_sem"">$/;"	function	line:64
+option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <option value="">Select<\/option>$/;"	function	line:65
+option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <option value="{{forloop.counter}}">{{forloop.counter}}<\/option>$/;"	function	line:67
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <div class="form-group">$/;"	function	line:72
+label	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <label for="id_course_schema">Course Schema<\/label>$/;"	function	line:73
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <div class="form-group">$/;"	function	line:74
+select	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                    <select required name="course_schema" class="form-control" id="id_course_schema">$/;"	function	line:75
+option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                      <option value="">Course Intro year<\/option>$/;"	function	line:76
+option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                      <option value="{{year}}">{{year}}<\/option>$/;"	function	line:78
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <div class="form-group">$/;"	function	line:84
+center	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                <center>$/;"	function	line:85
+input	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^                  <input type="submit" name='search' class="btn btn-primary " value=" Add ">$/;"	function	line:86
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^    <div class="col-md-1"><\/div>$/;"	function	line:92
+form	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^  <form action="{% url 'accounts:pass_value' %}" method = "GET">$/;"	function	line:97
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^    <div class="container">$/;"	function	line:98
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^      <div class="container row">$/;"	function	line:99
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="col-md-4"><\/div>$/;"	function	line:100
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="col-md-4">$/;"	function	line:101
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^          <div class="form-group ">$/;"	function	line:102
+select	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^            <select required multiple name="batches" class="form-control" id="id_batches">$/;"	function	line:103
+option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <option value="">Select Batches<\/option>$/;"	function	line:104
+option	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <option value="{{batch_count.branch_sem}}">{{batch_count.branch_sem}}<\/option>$/;"	function	line:106
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^        <div class="col-md-4">$/;"	function	line:111
+div	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^          <div class="form-group">$/;"	function	line:112
+input	/home/sirkp/time_table/accounts/templates/accounts/home.html	/^              <input type="submit" name='search' class="btn btn-primary " value="Generate Table">$/;"	function	line:113
+html	/home/sirkp/time_table/templates/base.html	/^<html lang="en" dir="ltr">$/;"	function	line:3
+head	/home/sirkp/time_table/templates/base.html	/^  <head>$/;"	function	line:4
+link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'bootstrap\/css\/bootstrap.min.css' %}">$/;"	function	line:5
+link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'css\/font-awesome.min.css' %}">$/;"	function	line:6
+link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'css\/imagehover.min.css' %}">$/;"	function	line:7
+link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'css\/style.css' %}">$/;"	function	line:8
+link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" href="{% static 'css\/my.css' %}">$/;"	function	line:9
+link	/home/sirkp/time_table/templates/base.html	/^    <link rel="stylesheet" type="text\/css" href="https:\/\/fonts.googleapis.com\/css?family=Open+Sans|Candal|Alegreya+Sans">$/;"	function	line:10
+script	/home/sirkp/time_table/templates/base.html	/^    <script src="{% static 'jquery\/jquery-3.4.1.min.js' %}"><\/script>$/;"	function	line:13
+script	/home/sirkp/time_table/templates/base.html	/^    <script src="{% static 'ajax\/popper.min.js' %}"><\/script>$/;"	function	line:14
+script	/home/sirkp/time_table/templates/base.html	/^    <script src="{% static 'bootstrap\/js\/bootstrap.min.js' %}"><\/script>$/;"	function	line:15
+script	/home/sirkp/time_table/templates/base.html	/^    <script src="https:\/\/code.jquery.com\/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"><\/script>$/;"	function	line:16
+meta	/home/sirkp/time_table/templates/base.html	/^    <meta charset="utf-8">$/;"	function	line:26
+title	/home/sirkp/time_table/templates/base.html	/^    <title>$/;"	function	line:28
+body	/home/sirkp/time_table/templates/base.html	/^    <body>$/;"	function	line:34
+nav	/home/sirkp/time_table/templates/base.html	/^      <nav class="navbar navbar-expand-lg navbar-dark primary-color myregister">$/;"	function	line:37
+a	/home/sirkp/time_table/templates/base.html	/^        <a class="navbar-brand" href="">Time Table<\/a>$/;"	function	line:40
+div	/home/sirkp/time_table/templates/base.html	/^        <div class="navbar-collapse" id="basicExampleNav">$/;"	function	line:45
+ul	/home/sirkp/time_table/templates/base.html	/^          <ul class="navbar-nav mr-auto">$/;"	function	line:48
+li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item active">$/;"	function	line:49
+a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="{% url 'accounts:home' %}"><font style="color: white;">Home<\/font><\/a>$/;"	function	line:50
+li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item">$/;"	function	line:52
+a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="http:\/\/iiitu.ac.in\/"><font style="color: white;">IIIT Una<\/font><\/a>$/;"	function	line:53
+li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item">$/;"	function	line:55
+a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="{% url 'admin:index' %}"><font style="color: white;">Admin<\/font><\/a>$/;"	function	line:56
+li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item">$/;"	function	line:59
+a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="{% url 'accounts:pass_value' %}"><font style="color: white;">Show Timetable<\/font><\/a>$/;"	function	line:60
+li	/home/sirkp/time_table/templates/base.html	/^            <li class="nav-item">$/;"	function	line:62
+a	/home/sirkp/time_table/templates/base.html	/^              <a class="nav-link" href="{% url 'accounts:logout' %}"><font style="color: white;">Logout<\/font><\/a>$/;"	function	line:63
+form	/home/sirkp/time_table/templates/base.html	/^          <form class="form-inline">$/;"	function	line:72
+div	/home/sirkp/time_table/templates/base.html	/^            <div class="md-form my-0">$/;"	function	line:73
+input	/home/sirkp/time_table/templates/base.html	/^              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">$/;"	function	line:74
+script	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^  <script src="{% static 'js\/function.js' %}"><\/script>$/;"	function	line:8
+script	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^<script type="text\/javascript">$/;"	function	line:16
+timeTable	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^  function timeTable()$/;"	function	line:19
+redirect	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^  function redirect(){$/;"	function	line:95
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^<div class="register">$/;"	function	line:100
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^  <div class="row">$/;"	function	line:101
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^    <div class="col-md-3 register-left">$/;"	function	line:103
+img	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <img src="https:\/\/image.ibb.co\/n7oTvU\/logo_white.png" alt=""\/>$/;"	function	line:104
+h	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <h3><font color="white">Welcome<\/font><\/h3>$/;"	function	line:105
+p	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <p>You are 30 seconds away from from making timetable<\/p>$/;"	function	line:106
+input	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <input type="submit" onclick="redirect()" href="" value="Home"\/>$/;"	function	line:107
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^    <div class="col-md-9 register-right">$/;"	function	line:110
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^      <div class="tab-content" id="myTabContent">$/;"	function	line:111
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^        <div id="home" role="tabpanel" aria-labelledby="home-tab">$/;"	function	line:112
+h	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^          <h3 class="register-heading">Select a Batch<\/h3>$/;"	function	line:113
+form	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^          <form action="{% url 'accounts:show_data' %}" method = "GET">$/;"	function	line:114
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^            <div class="row register-form">$/;"	function	line:115
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^              <div class="col-md-3"><\/div>$/;"	function	line:116
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^              <div class="col-md-6">$/;"	function	line:117
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                <div class="form-group ">$/;"	function	line:118
+select	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                  <select required name="batch" class="form-control" id="id_batch">$/;"	function	line:119
+option	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                    <option value="">Select Batch<\/option>$/;"	function	line:120
+option	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                    <option value="{{batch.branch_sem}}">{{batch.branch_sem}}<\/option>$/;"	function	line:122
+input	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^                <input onclick="timeTable()" type="submit" name='search' class="btnRegister" value="Show Table">$/;"	function	line:126
+div	/home/sirkp/time_table/accounts/templates/accounts/new.html	/^              <div class="col-md-3"><\/div>$/;"	function	line:128
+get_batch_code	/home/sirkp/time_table/accounts/views.py	/^def get_batch_code(s):$/;"	function	line:35
+fetch_data	/home/sirkp/time_table/accounts/views.py	/^def fetch_data(request):$/;"	function	line:52
+show_data	/home/sirkp/time_table/accounts/views.py	/^def show_data(request):$/;"	function	line:153
+pass_value	/home/sirkp/time_table/accounts/views.py	/^def pass_value(request):$/;"	function	line:543
+Homepage	/home/sirkp/time_table/accounts/views.py	/^class Homepage(LoginRequiredMixin,ListView):$/;"	class	line:566
+login_url	/home/sirkp/time_table/accounts/views.py	/^    login_url = 'index'$/;"	variable	line:567	class:Homepage
+model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:568	class:Homepage
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/home.html'$/;"	variable	line:569	class:Homepage
+context_object_name	/home/sirkp/time_table/accounts/views.py	/^    context_object_name = 'batch_counts'$/;"	variable	line:570	class:Homepage
+get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:572	class:Homepage
+get_queryset	/home/sirkp/time_table/accounts/views.py	/^    def get_queryset(self):$/;"	member	line:581	class:Homepage
+AddBatch	/home/sirkp/time_table/accounts/views.py	/^class AddBatch(LoginRequiredMixin,CreateView):$/;"	class	line:585
+model	/home/sirkp/time_table/accounts/views.py	/^    model = Batch$/;"	variable	line:586	class:AddBatch
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/add_batch.html'$/;"	variable	line:587	class:AddBatch
+fields	/home/sirkp/time_table/accounts/views.py	/^    fields = ('course_code','teacher_code','room','no_class_week','no_of_slots')$/;"	variable	line:588	class:AddBatch
+no_of_courses	/home/sirkp/time_table/accounts/views.py	/^    no_of_courses=0$/;"	variable	line:589	class:AddBatch
+success_url	/home/sirkp/time_table/accounts/views.py	/^    success_url = reverse_lazy('accounts:home')$/;"	variable	line:590	class:AddBatch
+branch_sem	/home/sirkp/time_table/accounts/views.py	/^    branch_sem = ''$/;"	variable	line:591	class:AddBatch
+get_context_data	/home/sirkp/time_table/accounts/views.py	/^    def get_context_data(self, **kwargs):$/;"	member	line:593	class:AddBatch
+post	/home/sirkp/time_table/accounts/views.py	/^    def post(self, request, *args, **kwargs):$/;"	member	line:613	class:AddBatch
+CustomLoginView	/home/sirkp/time_table/accounts/views.py	/^class CustomLoginView(LoginView,RedirectView):$/;"	class	line:652
+form_class	/home/sirkp/time_table/accounts/views.py	/^    form_class = LoginForm$/;"	variable	line:657	class:CustomLoginView
+template_name	/home/sirkp/time_table/accounts/views.py	/^    template_name = 'accounts\/login.html'$/;"	variable	line:658	class:CustomLoginView
+get_redirect_url	/home/sirkp/time_table/accounts/views.py	/^    def get_redirect_url(self):$/;"	member	line:660	class:CustomLoginView
+signup	/home/sirkp/time_table/accounts/views.py	/^def signup(request):$/;"	function	line:666
+activate	/home/sirkp/time_table/accounts/views.py	/^def activate(request, uidb64, token):$/;"	function	line:692
+br	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^<br><br>$/;"	function	line:13
+div	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^<div class="container">$/;"	function	line:15
+p	/home/sirkp/time_table/templates/registration/password_reset_complete.html	/^  <p>$/;"	function	line:16

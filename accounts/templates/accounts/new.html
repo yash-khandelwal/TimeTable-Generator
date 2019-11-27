@@ -91,6 +91,10 @@ sign up
                    }
                   });
                 }
+
+  function redirect(){
+    window.location.href = '{% url 'accounts:home' %}'
+  };
 </script>
 
 <div class="register">
@@ -100,7 +104,7 @@ sign up
       <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
       <h3><font color="white">Welcome</font></h3>
       <p>You are 30 seconds away from from making timetable</p>
-      <input type="submit" onclick="redirect()" href="" value="Register"/>
+      <input type="submit" onclick="redirect()" href="" value="Home"/>
     </div>
 
     <div class="col-md-9 register-right">
@@ -112,7 +116,7 @@ sign up
               <div class="col-md-3"></div>
               <div class="col-md-6">
                 <div class="form-group ">
-                  <select name="batch" class="form-control" id="id_batch">
+                  <select required name="batch" class="form-control" id="id_batch">
                     <option value="">Select Batch</option>
                     {% for batch in all_batches %}
                     <option value="{{batch.branch_sem}}">{{batch.branch_sem}}</option>
@@ -129,30 +133,6 @@ sign up
     </div>
   </div>
 </div>
-
-<!-- <form action="{% url 'accounts:show_data' %}" method = "GET">
-  <div class="container">
-    <div class="container row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <div class="form-group ">
-          <select name="batch" class="form-control" id="id_batch">
-            <option value="">Select Batch</option>
-            {% for batch_count in batch_counts %}
-            <option value="{{ forloop.counter0 }}">{{batch_count.branch_sem}}</option>
-            {% endfor %}
-          </select>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="form-group">
-            <input onclick="timeTable()" type="submit" name='search' class="btn btn-primary " value="Show Table">
-        </div>
-      </div>
-    </div>
-  </div>
-</form> -->
-
 
 
 {% endblock %}

@@ -55,11 +55,14 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'admin:index' %}"><font style="color: white;">Admin</font></a>
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item">
-              {% if user.is_authenticated %}
-              <a class="nav-link" href="{% url 'accounts:logout' %}"><font style="color: white;">Logout</font></a>
-              {% endif %}
+              <a class="nav-link" href="{% url 'accounts:pass_value' %}"><font style="color: white;">Show Timetable</font></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'accounts:logout' %}"><font style="color: white;">Logout</font></a>
+            </li>
+              {% endif %}
 
             <!-- Dropdown -->
 

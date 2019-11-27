@@ -53,7 +53,7 @@ Home
       <center><h1>ADD BATCH</h1></center>
       <form action="{% url 'accounts:add_batch' %}" method = "GET">
         <div class="">
-              <div class="form-group"><label for="id_branch">Branch</label><select name="branch" class="form-control" id="branch">
+              <div class="form-group"><label for="id_branch">Branch</label><select required name="branch" class="form-control" id="branch">
                 <option value="">Select</option>
                 {% for branch in branches %}
                 <option value="{{branch.branch_code}}">{{branch.branch_code}}</option>
@@ -61,7 +61,7 @@ Home
                 </select>
               </div>
 
-              <div class="form-group"><label for="id_sem">Sem</label><select name="sem" class="form-control" id="id_sem"">
+              <div class="form-group"><label for="id_sem">Sem</label><select required name="sem" class="form-control" id="id_sem"">
                 <option value="">Select</option>
                 {% for i in '12345678'|make_list %}
                   <option value="{{forloop.counter}}">{{forloop.counter}}</option>
@@ -72,7 +72,7 @@ Home
               <div class="form-group">
                 <label for="id_course_schema">Course Schema</label>
                   <div class="form-group">
-                    <select name="course_schema" class="form-control" id="id_course_schema">
+                    <select required name="course_schema" class="form-control" id="id_course_schema">
                       <option value="">Course Intro year</option>
                       {% for year in course_schema %}
                       <option value="{{year}}">{{year}}</option>
@@ -100,7 +100,7 @@ Home
         <div class="col-md-4"></div>
         <div class="col-md-4">
           <div class="form-group ">
-            <select multiple name="batches" class="form-control" id="id_batches">
+            <select required multiple name="batches" class="form-control" id="id_batches">
               <option value="">Select Batches</option>
               {% for batch_count in batch_counts %}
               <option value="{{batch_count.branch_sem}}">{{batch_count.branch_sem}}</option>

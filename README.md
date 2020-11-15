@@ -14,7 +14,7 @@ Timetable Generator is a Django Mysql web app used to generate timetable automat
 - Python 3.7
 
 ### Installation
-`pip install django`
+`pip install django==2.2.17`
 
 `pip install bcrypt`
 
